@@ -32,16 +32,70 @@ writes and how.
 
 ## Run it
 
-Python 3.10 or later. In VS Code, open this folder, then in the terminal:
+You need Python 3.10 or later. Open this folder in VS Code, then open a
+terminal (Terminal → New Terminal). The commands below are for Windows
+PowerShell; the Mac/Linux equivalents follow.
+
+**1. Go to the project folder** (VS Code usually opens the terminal there already):
 
 ```
-pip install -r requirements.txt
+cd "C:\path\to\cbam-downstream"
+```
+
+**2. Create a virtual environment (first time only).** It goes outside the
+project folder so OneDrive does not try to sync it:
+
+```
+python -m venv $HOME\.venvs\cbam
+```
+
+**3. Activate it (every new terminal).** `(cbam)` then appears at the start of the prompt:
+
+```
+& $HOME\.venvs\cbam\Scripts\Activate.ps1
+```
+
+If PowerShell says running scripts is disabled, run
+`Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` once, then try again.
+
+**4. Install the packages (first time only, or when `requirements.txt` changes):**
+
+```
+python -m pip install -r requirements.txt
+```
+
+**5. Run the whole pipeline.** It takes about 15 seconds:
+
+```
 python run_all.py
 ```
 
-The whole chain takes about 15 seconds. Open `docs/index.html` in a browser to
-see the chart; with GitHub Pages, serve the `docs/` folder. Each step can also
-be run alone, e.g. `python src/03_build_final.py`.
+If this stops with `ModuleNotFoundError: No module named 'pandas'`, the
+environment is not active (no `(cbam)` at the start of the prompt): go back to
+step 3, then run it again.
+
+**6. Open the chart in your browser:**
+
+```
+start docs\index.html
+```
+
+**Only changed the chart's look (`chart/template.html`)?** Skip step 5 and
+rebuild just the chart, then reopen it:
+
+```
+python src/04_build_chart.py
+start docs\index.html
+```
+
+Any step can be run on its own in the same way, e.g. `python src/03_build_final.py`.
+
+**Mac/Linux:** create the environment with `python3 -m venv ~/.venvs/cbam`, activate
+it with `source ~/.venvs/cbam/bin/activate`, and open the chart with
+`open docs/index.html` (Mac) or `xdg-open docs/index.html` (Linux). The other
+commands are the same.
+
+To publish the chart with GitHub Pages, serve the `docs/` folder.
 
 ## Check that it reproduces the published chart
 
