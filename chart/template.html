@@ -1,0 +1,295 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>CBAM Downstream Map</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one editorial column — red tag, headline, standfirst, filter row, the chart, notes. */
+:root {
+  --bg: #ffffff; --fg: #121212; --muted: #5b5a55; --faint: #8d8c86; --rule: #e6e5e0; --panel: #f6f6f3;
+  --tag: #e3120b;
+  --com: #2a78d6; --cnl: #eb6834; --ep: #1baf7a;
+  --display: "IBM Plex Sans Condensed", "Arial Narrow", Arial, sans-serif;
+  --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #161615; --fg: #f0efea; --muted: #bdbcb4; --faint: #8a8982; --rule: #2f2f2c; --panel: #20201e;
+  --tag: #ff4a3d; --com: #3987e5; --cnl: #d95926; --ep: #199e70; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #161615; --fg: #f0efea; --muted: #bdbcb4; --faint: #8a8982; --rule: #2f2f2c; --panel: #20201e;
+  --tag: #ff4a3d; --com: #3987e5; --cnl: #d95926; --ep: #199e70; color-scheme: dark }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.45;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 24px 40px; }
+.wrap { max-width: 980px; margin: 0 auto; display: grid; gap: 14px; }
+.tag { width: 44px; height: 10px; background: var(--tag); }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 4vw, 36px); line-height: 1.08; margin: 0; text-wrap: balance; }
+.stand { color: var(--muted); font-size: 16px; margin: 0; max-width: 64ch; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chip { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--rule); background: var(--bg); color: var(--fg);
+  border-radius: 999px; padding: 6px 12px 6px 10px; font: 500 14px var(--body); cursor: pointer; }
+.chip .dot { width: 12px; height: 12px; border-radius: 50%; }
+.chip .n { color: var(--muted); font-weight: 400; font-variant-numeric: tabular-nums; }
+.chip[aria-pressed="false"] { opacity: .45; }
+.chip[aria-pressed="false"] .dot { background: transparent !important; box-shadow: inset 0 0 0 2px var(--faint); }
+.chip:focus-visible, .search:focus-visible, .small:focus-within { outline: 2px solid var(--fg); outline-offset: 2px; }
+.search { flex: 1 1 200px; min-width: 0; border: 1px solid var(--rule); background: var(--bg); color: var(--fg); border-radius: 999px;
+  padding: 7px 14px; font: 400 14px var(--body); }
+.seg { border: 1px solid var(--rule); background: var(--bg); color: var(--muted); border-radius: 6px; padding: 5px 10px; font: 400 13px var(--body); cursor: pointer; }
+.seg[aria-checked="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.seg:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+.key { display: flex; gap: 10px; align-items: center; color: var(--muted); font-size: 13.5px; }
+.key svg { flex: none; width: 34px; height: 16px; }
+.small { display: inline-flex; gap: 6px; align-items: center; color: var(--muted); font-size: 13px; }
+.chartbox { position: relative; }
+svg { display: block; width: 100%; height: auto; overflow: visible; touch-action: manipulation; }
+.axis text { fill: var(--muted); font: 400 12px var(--body); font-variant-numeric: tabular-nums; }
+.axis line { stroke: var(--rule); }
+.axislabel { fill: var(--muted); font: 500 12.5px var(--body); }
+.axis line.cut, .cut { stroke: var(--muted); stroke-width: 1.2; stroke-dasharray: 5 4; }
+[hidden] { display: none !important; }
+.quad { font: 600 12px var(--body); letter-spacing: .06em; fill: var(--faint); }
+.quad tspan.sub { font-weight: 400; letter-spacing: 0; }
+circle.p { stroke-width: 1; fill-opacity: .85; transition: opacity .15s; }
+circle.p.hollow { stroke-width: 1.8; }
+circle.p.left { opacity: .45; }
+circle.p.off { opacity: .06; }
+circle.ring { fill: none; stroke: var(--fg); stroke-width: 2; pointer-events: none; }
+.tip { position: absolute; pointer-events: none; max-width: 340px; background: var(--bg); color: var(--fg); border: 1px solid var(--rule);
+  border-radius: 6px; padding: 10px 12px; box-shadow: 0 6px 24px rgba(0,0,0,.14); font-size: 13px; display: grid; gap: 6px; z-index: 2; }
+.tip .nm { font-weight: 600; font-size: 14px; line-height: 1.3; }
+.tip .code { color: var(--faint); font-size: 12px; }
+.tip dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; }
+.tip dt { color: var(--muted); } .tip dd { margin: 0; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.pos { display: flex; gap: 4px; flex-wrap: wrap; }
+.pos span { font-size: 11.5px; border-radius: 999px; padding: 1px 8px; border: 1px solid var(--rule); color: var(--faint); }
+.pos span.on { color: #fff; border-color: transparent; }
+.notes { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; max-width: 80ch; }
+details { border-top: 1px solid var(--rule); padding-top: 10px; }
+summary { cursor: pointer; font-weight: 500; }
+.tbl { overflow-x: auto; margin-top: 10px; }
+table { border-collapse: collapse; font-size: 13px; min-width: 640px; width: 100%; }
+th, td { text-align: left; padding: 5px 8px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+@media (prefers-reduced-motion: reduce) { circle.p { transition: none; } }
+.wrap { max-width: 1140px; }
+.chartrow { display: grid; grid-template-columns: minmax(0, 1fr) 170px; gap: 20px; align-items: start; }
+.side { border-left: 1px solid var(--rule); padding-left: 16px; display: grid; gap: 4px; font-size: 13px; color: var(--muted); }
+.side-h { font: 600 11.5px var(--body); letter-spacing: .06em; text-transform: uppercase; color: var(--faint); margin-top: 12px; }
+.side-h:first-child { margin-top: 0; }
+.big { font: 700 34px/1.05 var(--display); color: var(--fg); font-variant-numeric: tabular-nums; }
+.big small { font: 500 14px var(--body); color: var(--muted); margin-left: 4px; }
+.side-sub { font-size: 12.5px; line-height: 1.35; }
+.cnt { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 3px 10px; }
+.cnt dt { display: flex; align-items: center; gap: 6px; }
+.cnt dt .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; }
+.cnt dd { margin: 0; color: var(--fg); font-weight: 600; font-variant-numeric: tabular-nums; text-align: right; }
+.cnt dt.off, .cnt dt.off + dd { opacity: .4; }
+@media (max-width: 760px) {
+  .chartrow { grid-template-columns: 1fr; gap: 12px; }
+  .side { border-left: 0; border-top: 1px solid var(--rule); padding: 10px 0 0; }
+  .side-h { margin-top: 8px; }
+}
+</style>
+
+<div class="wrap">
+  <div class="tag" aria-hidden="true"></div>
+  <h1>Extending CBAM downstream: carbon-leakage risk and import dependence, product by product</h1>
+  <p class="stand">Each circle is a product the EU might bring under its carbon border tax (CBAM). Higher up, the tax bites harder on the price. Further right, more of what the EU uses comes from abroad. Hover over a circle to see the product.</p>
+
+  <div class="controls" role="group" aria-label="Filter by institution">
+    <button class="chip" id="f-com" data-k="com" aria-pressed="true"><span class="dot" style="background:var(--com)"></span>In the Commission's proposal <span class="n" id="n-com"></span></button>
+    <button class="chip" id="f-cnl" data-k="cnl" aria-pressed="true"><span class="dot" style="background:var(--cnl)"></span>Added by the Council <span class="n" id="n-cnl"></span></button>
+    <button class="chip" id="f-ep" data-k="ep" aria-pressed="true"><span class="dot" style="background:var(--ep)"></span>Added only by Parliament <span class="n" id="n-ep"></span></button>
+  </div>
+  <div class="key"><svg width="34" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="var(--muted)"/><circle cx="26" cy="8" r="5.3" fill="none" stroke="var(--muted)" stroke-width="1.6"/></svg>
+    <span>Filled: one country supplies more than half of the EU's imports of that product. Hollow: imports come from several countries.</span></div>
+  <div class="controls"><span class="small" id="shown"></span>
+    <label class="small"><input type="checkbox" id="all"> Show all products, including small ones</label></div>
+  <div class="chartrow">
+  <div class="chartbox" id="box">
+    <svg id="chart" viewBox="0 0 960 600" role="img" aria-label="Scatter chart of downstream products: share bought from the largest supplier against the CBAM charge as a share of price"></svg>
+    <div class="tip" id="tip" hidden></div>
+  </div>
+  <aside class="side" aria-live="polite" aria-label="Count of products on the chart">
+    <div class="side-h">On the chart</div>
+    <div class="big" id="c-tot"></div>
+    <div class="side-sub" id="c-sub"></div>
+    <div class="side-h">By position</div>
+    <dl class="cnt" id="c-pos"></dl>
+    <div class="side-h">By worry</div>
+    <dl class="cnt" id="c-quad"></dl>
+  </aside>
+  </div>
+
+  <div class="notes">
+    <div>Circle size shows imports from outside the EU, average 2022–24. Button totals cover every line on each list. Colour shows which position first put the product on the list: the Council and Parliament build on the Commission's list.</div>
+    <div>How to read it: a product is a supply-security worry if imports supply more than a third of the EU market (right of the dashed line) <em>and</em> one country supplies more than half of those imports (filled circle). It is a carbon-leakage worry if the CBAM charge is above 1.5% of the price (above the dashed line).</div>
+    <div>Official counts and ours: the Commission proposed about 180 downstream products; we find 178 eight-digit tariff lines. The Council kept them, dropped three and added 200, about 370 lines in all, so the often-quoted "about 200" describes its additions, not its whole list. Parliament's 457 matches the Commission's lines plus the 276 it lists one by one (we find about 450); its broad headings reach 623 lines in all, which is what this map uses. The buttons count the lines each position adds, and colour credits each line to the first position that lists it.</div>
+    <div>CBAM charge: carbon in the steel or aluminium content at €82 a tonne of CO₂, once fully phased in. EU market: EU production plus imports from outside the EU.</div>
+    <div>Sources: Eurostat Comext and Prodcom; European Commission COM(2025) 989; Council of the EU ST 10423/26; European Parliament P10_TA(2026)0276; CER analysis.</div>
+  </div>
+
+  <details>
+    <summary>All products as a list</summary>
+    <div class="tbl"><table id="tbl"><thead><tr><th>Product</th><th>First listed by</th><th class="num">Imports, €m</th><th class="num">Imports' share of EU market</th><th>Main supplier, share of imports</th><th class="num">CBAM charge</th></tr></thead><tbody></tbody></table></div>
+  </details>
+</div>
+
+<script>
+const DATA = __DATA__;
+const LABEL = { com: "Commission", cnl: "Council", ep: "Parliament" };
+const FIRST = { com: "Commission's proposal", cnl: "Added by the Council", ep: "Added only by Parliament" };
+const W = 960, H = 600, M = { l: 64, r: 16, t: 16, b: 58 };
+const AX = { x0: 0, x1: 0.85, cut: 1 / 3, ticks: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8],
+  label: "Share of the EU market supplied by imports from outside the EU →" };
+const CONC = 0.5;
+const Y0 = 4e-5, Y1 = 0.2, YCUT = 0.015;
+const sx = v => M.l + (v - AX.x0) / (AX.x1 - AX.x0) * (W - M.l - M.r);
+const sy = v => H - M.b - (Math.log10(v) - Math.log10(Y0)) / (Math.log10(Y1) - Math.log10(Y0)) * (H - M.t - M.b);
+const pct = v => (v >= 0.01 ? (v * 100).toFixed(1) : v >= 0.001 ? (v * 100).toFixed(2) : (v * 100).toFixed(3)) + "%";
+const eur = m => m >= 1000 ? "€" + (m / 1000).toFixed(1) + "bn" : "€" + Math.round(m) + "m";
+const svgNS = "http://www.w3.org/2000/svg";
+const el = (n, a, p) => { const e = document.createElementNS(svgNS, n); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
+const svg = document.getElementById("chart"), tip = document.getElementById("tip"), box = document.getElementById("box");
+const state = { on: { com: true, cnl: true, ep: true }, all: false };
+try { const s = JSON.parse(localStorage.getItem("cbam-map") || "{}"); if (s.on) state.on = s.on; } catch (e) {}
+const maxM = Math.max(...DATA.map(d => d.m));
+const r = d => 3 + 30 * Math.sqrt(d.m / maxM);
+
+const strategic = d => d.su > AX.cut && d.s > CONC;
+function quadrant(d) {
+  const hi = d.ch >= YCUT, imp = d.su > AX.cut, st = strategic(d);
+  if (hi && st) return "Carbon-heavy, and the EU leans on one foreign supplier";
+  if (hi) return "Carbon-heavy, no single foreign supplier to worry about: the classic leakage case";
+  if (st) return "Little carbon, but the EU leans on one foreign supplier: a security question";
+  if (imp) return "Imports matter, but they come from several countries";
+  return "Little carbon, and mostly made in the EU";
+}
+
+function axes() {
+  svg.querySelectorAll(".frame").forEach(n => n.remove());
+  const g = el("g", { class: "axis frame" }, svg);
+  svg.insertBefore(g, svg.firstChild);
+  AX.ticks.forEach(v => {
+    el("line", { x1: sx(v), x2: sx(v), y1: M.t, y2: H - M.b }, g);
+    const t = el("text", { x: sx(v), y: H - M.b + 18, "text-anchor": "middle" }, g); t.textContent = Math.round(v * 100) + "%";
+  });
+  [1e-4, 1e-3, 1e-2, 1e-1].forEach(v => {
+    el("line", { x1: M.l, x2: W - M.r, y1: sy(v), y2: sy(v) }, g);
+    const t = el("text", { x: M.l - 8, y: sy(v) + 4, "text-anchor": "end" }, g); t.textContent = (v * 100) + "%";
+  });
+  const xl = el("text", { class: "axislabel", x: (M.l + W - M.r) / 2, y: H - 14, "text-anchor": "middle" }, g);
+  xl.textContent = AX.label;
+  const yl = el("text", { class: "axislabel", transform: `translate(16 ${(M.t + H - M.b) / 2}) rotate(-90)`, "text-anchor": "middle" }, g);
+  yl.textContent = "CBAM charge as % of the import price (log scale) →";
+  el("line", { class: "cut", x1: sx(AX.cut), x2: sx(AX.cut), y1: M.t, y2: H - M.b }, g);
+  el("line", { class: "cut", x1: M.l, x2: W - M.r, y1: sy(YCUT), y2: sy(YCUT) }, g);
+  const q = (x, y, a, t1, t2) => { const t = el("text", { class: "quad", x, y, "text-anchor": a }, g);
+    const s1 = el("tspan", { x, dy: 0 }, t); s1.textContent = t1; const s2 = el("tspan", { class: "sub", x, dy: 15 }, t); s2.textContent = t2; };
+  q(M.l + 10, M.t + 16, "start", "CARBON LEAKAGE", "carbon-heavy, mostly made in the EU");
+  q(W - M.r - 10, M.t + 16, "end", "BOTH", "filled circles here: carbon-heavy and one supplier dominates");
+  q(M.l + 10, H - M.b - 26, "start", "NEITHER", "little carbon, mostly made in the EU");
+  q(W - M.r - 10, H - M.b - 26, "end", "SUPPLY SECURITY", "filled circles here: imports dominate, one supplier dominates");
+}
+
+let dots = [], ring;
+function draw() {
+  dots.forEach(c => c.remove()); dots = [];
+  const show = DATA.filter(d => (state.all || d.m >= 250) && d.su != null).sort((a, b) => b.m - a.m);
+  const g = svg.querySelector("g.pts") || el("g", { class: "pts" }, svg);
+  show.forEach(d => {
+    const filled = d.s > CONC, right = d.su > AX.cut;
+    const c = el("circle", { class: "p" + (filled ? "" : " hollow") + (right ? "" : " left"), cx: sx(Math.min(Math.max(d.su, AX.x0), AX.x1)),
+      cy: sy(Math.min(Math.max(d.ch, Y0), Y1)), r: filled ? r(d) : Math.max(2, r(d) - 1),
+      fill: filled ? `var(--${d.k})` : "none", stroke: filled ? "var(--bg)" : `var(--${d.k})` }, g);
+    c.__d = d; dots.push(c);
+  });
+  ring = ring || el("circle", { class: "ring", r: 0 }, svg); svg.appendChild(ring); ring.setAttribute("r", 0);
+  filter();
+  const counts = { com: 0, cnl: 0, ep: 0 }, sums = { com: 0, cnl: 0, ep: 0 };
+  DATA.forEach(d => { counts[d.k] += d.l; sums[d.k] += d.m; });
+  for (const k in counts) document.getElementById("n-" + k).textContent = `${counts[k]} tariff lines · ${eur(sums[k])}`;
+  const tot = DATA.reduce((a, d) => a + d.m, 0), vis = show.reduce((a, d) => a + d.m, 0), miss = DATA.filter(d => d.su == null);
+  document.getElementById("shown").textContent = (state.all
+    ? `Showing all ${show.length} products with EU production data`
+    : `Showing the ${show.length} largest products (imports over €250m), ${Math.round(vis / tot * 100)}% of the import value`)
+    + (miss.length ? `; ${miss.length} products (${eur(miss.reduce((a, d) => a + d.m, 0))}) lack EU production data and cannot be placed.` : ".");
+  table(DATA.slice().sort((a, b) => b.m - a.m));
+}
+function visible(d) {
+  return state.on[d.k];
+}
+function filter() { dots.forEach(c => c.classList.toggle("off", !visible(c.__d))); side(); }
+
+const QUAD = [["leak", "Carbon leakage"], ["both", "Both"], ["sec", "Supply security"], ["none", "Neither"]];
+function worry(d) {
+  const hi = d.ch >= YCUT, st = strategic(d);
+  return hi && st ? "both" : hi ? "leak" : st ? "sec" : "none";
+}
+function side() {
+  const on = dots.map(c => c.__d).filter(visible);
+  const placed = DATA.filter(d => d.su != null).length;
+  const pos = { com: 0, cnl: 0, ep: 0 }, q = { leak: 0, both: 0, sec: 0, none: 0 };
+  on.forEach(d => { pos[d.k]++; q[worry(d)]++; });
+  const val = on.reduce((a, d) => a + d.m, 0), lines = on.reduce((a, d) => a + d.l, 0);
+  document.getElementById("c-tot").innerHTML = `${on.length}<small>${on.length === 1 ? "product" : "products"}</small>`;
+  document.getElementById("c-sub").textContent = `of ${placed} that can be placed · ${lines} tariff lines · ${eur(val)} of imports`;
+  const row = (label, n, dot, off) => `<dt class="${off ? "off" : ""}">${dot ? `<span class="dot" style="background:var(--${dot})"></span>` : ""}${label}</dt><dd>${n}</dd>`;
+  document.getElementById("c-pos").innerHTML = ["com", "cnl", "ep"]
+    .map(k => row({ com: "Commission's list", cnl: "Council additions", ep: "Parliament only" }[k], pos[k], k, !state.on[k])).join("");
+  document.getElementById("c-quad").innerHTML = QUAD.map(([k, l]) => row(l, q[k])).join("");
+}
+
+function showTip(c) {
+  const d = c.__d, cx = +c.getAttribute("cx"), cy = +c.getAttribute("cy");
+  ring.setAttribute("cx", cx); ring.setAttribute("cy", cy); ring.setAttribute("r", +c.getAttribute("r") + 3);
+  tip.innerHTML = `<div class="nm"></div><div class="code"></div>
+    <dl><dt>Imports from outside the EU</dt><dd>${eur(d.m)} a year</dd>
+    <dt>Imports' share of EU market</dt><dd>${Math.round(d.su * 100)}%</dd>
+    <dt>Main supplier</dt><dd>${d.p}, ${Math.round(d.s * 100)}% of imports</dd>
+    <dt>CBAM charge</dt><dd>${pct(d.ch)} of price</dd></dl>
+    <div class="code">Listed by</div><div class="pos">${["com", "cnl", "ep"].map((k, i) => `<span class="${d.pos[i] ? "on" : ""}" style="${d.pos[i] ? `background:var(--${k})` : ""}">${d.pos[i] ? "✓" : "✗"} ${LABEL[k]}</span>`).join("")}</div>
+    <div class="code"></div>`;
+  tip.querySelector(".nm").textContent = d.n;
+  tip.querySelectorAll(".code")[0].textContent = `HS ${d.c.slice(0, 4)} ${d.c.slice(4)} · ${d.g}${d.l > 1 ? ` · ${d.l} tariff lines` : ""}`;
+  tip.querySelectorAll(".code")[2].textContent = quadrant(d);
+  tip.hidden = false;
+  const bb = box.getBoundingClientRect(), k = bb.width / W, px = cx * k, py = cy * k, tw = tip.offsetWidth, th = tip.offsetHeight;
+  let left = px + 14, top = py - th - 10;
+  if (left + tw > bb.width) left = px - tw - 14;
+  if (left < 0) left = Math.max(0, Math.min(bb.width - tw, px - tw / 2));
+  if (top < 0) top = py + 16;
+  tip.style.left = left + "px"; tip.style.top = top + "px";
+}
+function hideTip() { tip.hidden = true; ring.setAttribute("r", 0); }
+function nearest(evt) {
+  const pt = svg.createSVGPoint(); pt.x = evt.clientX; pt.y = evt.clientY;
+  const p = pt.matrixTransform(svg.getScreenCTM().inverse());
+  let best = null, bd = Infinity;
+  dots.forEach(c => { if (c.classList.contains("off")) return;
+    const dx = +c.getAttribute("cx") - p.x, dy = +c.getAttribute("cy") - p.y, dist = Math.hypot(dx, dy) - +c.getAttribute("r");
+    if (dist < bd) { bd = dist; best = c; } });
+  return bd < 18 ? best : null;
+}
+svg.addEventListener("pointermove", e => { if (e.pointerType !== "mouse") return; const c = nearest(e); c ? showTip(c) : hideTip(); });
+svg.addEventListener("pointerleave", e => { if (e.pointerType === "mouse") hideTip(); });
+svg.addEventListener("click", e => { const c = nearest(e); c ? showTip(c) : hideTip(); });
+
+document.querySelectorAll(".chip").forEach(b => {
+  b.setAttribute("aria-pressed", state.on[b.dataset.k]);
+  b.addEventListener("click", () => { state.on[b.dataset.k] = !state.on[b.dataset.k]; b.setAttribute("aria-pressed", state.on[b.dataset.k]); filter(); save(); });
+});
+function save() { try { localStorage.setItem("cbam-map", JSON.stringify({ on: state.on })); } catch (e) {} }
+document.getElementById("all").addEventListener("change", e => { state.all = e.target.checked; hideTip(); draw(); });
+
+function table(rows) {
+  const tb = document.querySelector("#tbl tbody"); tb.innerHTML = "";
+  rows.forEach(d => { const tr = document.createElement("tr");
+    [d.n, FIRST[d.k], Math.round(d.m).toLocaleString("en-GB"), d.su == null ? "n/a" : Math.round(d.su * 100) + "%", d.p + ", " + Math.round(d.s * 100) + "%", pct(d.ch)].forEach((v, i) => {
+      const td = document.createElement("td"); td.textContent = v; if ([2, 3, 5].includes(i)) td.className = "num"; tr.appendChild(td); });
+    tb.appendChild(tr); });
+}
+axes(); draw();
+</script>
+
+</body></html>

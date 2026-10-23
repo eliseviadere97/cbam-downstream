@@ -1,0 +1,43 @@
+code,sector,status
+260112,Iron and steel,In scope
+72,Iron and steel,In scope
+7301,Iron and steel,In scope
+7302,Iron and steel,In scope
+730300,Iron and steel,In scope
+7304,Iron and steel,In scope
+7305,Iron and steel,In scope
+7306,Iron and steel,In scope
+7307,Iron and steel,In scope
+7308,Iron and steel,In scope
+730900,Iron and steel,In scope
+7310,Iron and steel,In scope
+731100,Iron and steel,In scope
+7318,Iron and steel,In scope
+7326,Iron and steel,In scope
+7601,Aluminium,In scope
+7603,Aluminium,In scope
+7604,Aluminium,In scope
+7605,Aluminium,In scope
+7606,Aluminium,In scope
+7607,Aluminium,In scope
+7608,Aluminium,In scope
+76090000,Aluminium,In scope
+7610,Aluminium,In scope
+76110000,Aluminium,In scope
+7612,Aluminium,In scope
+76130000,Aluminium,In scope
+7614,Aluminium,In scope
+7616,Aluminium,In scope
+72022100,Iron and steel,"Exception (ferro-alloy, not in scope)"
+720229,Iron and steel,"Exception (ferro-alloy, not in scope)"
+72023000,Iron and steel,"Exception (ferro-alloy, not in scope)"
+72025000,Iron and steel,"Exception (ferro-alloy, not in scope)"
+72027000,Iron and steel,"Exception (ferro-alloy, not in scope)"
+72028000,Iron and steel,"Exception (ferro-alloy, not in scope)"
+72029100,Iron and steel,"Exception (ferro-alloy, not in scope)"
+72029200,Iron and steel,"Exception (ferro-alloy, not in scope)"
+72029300,Iron and steel,"Exception (ferro-alloy, not in scope)"
+72029910,Iron and steel,"Exception (ferro-alloy, not in scope)"
+72029930,Iron and steel,"Exception (ferro-alloy, not in scope)"
+72029980,Iron and steel,"Exception (ferro-alloy, not in scope)"
+7204,Iron and steel,"Exception (scrap, not in scope)"

@@ -1,0 +1,387 @@
+map_order,hs6,product,product_group,cn8_lines,first_listed_by,on_commission,on_council,on_parliament,imports_eur_m,main_supplier,main_supplier_share,china_share,import_share_eu_market,import_share_consumption,main_supplier_share_market,main_supplier_share_consumption,exports_over_production,cbam_charge
+1,731210,"Stranded wire, ropes and cables, of iron or steel other than stainless steel, with a maximum cross-sectional dimension of <= 3 mm, plated or…","Wire, ropes, netting and fencing",11,Commission,1,1,1,953.2,China,0.358,0.358,0.305,0.399,0.109,0.143,0.34,0.06923
+2,731290,"Plaited bands, slings and the like, of iron or steel","Wire, ropes, netting and fencing",1,Council,0,1,1,35.1,China,0.48,0.48,0.169,0.212,0.081,0.102,0.25,0.03167
+3,731300,"Barbed wire of iron or steel; twisted hoop or single flat wire, barbed or not, and loosely twisted double wire, of a kind used for fencing, of…",Other iron and steel articles,1,Parliament,0,0,1,24.8,China,0.546,0.546,0.226,0.257,0.123,0.14,0.16,0.09392
+4,731412,"Endless bands of stainless steel wire, for machinery","Wire, ropes, netting and fencing",1,Council,0,1,1,10.5,Britain,0.428,0.332,0.046,0.053,0.019,0.022,0.14,0.01705
+5,731414,"Woven cloth, incl. endless bands, of stainless steel wire","Wire, ropes, netting and fencing",1,Parliament,0,0,1,48.4,China,0.674,0.674,0.135,0.163,0.091,0.11,0.2,0.01734
+6,731419,"Woven cloth, incl. endless bands, of iron or steel wire","Wire, ropes, netting and fencing",1,Parliament,0,0,1,29.9,China,0.547,0.547,0.135,0.163,0.074,0.089,0.2,0.04299
+7,731420,"Grill, netting and fencing, welded at the intersection, having a mesh size of >= 100 cm², of ribbed iron or steel wire of a maximum…","Wire, ropes, netting and fencing",2,Council,0,1,1,167.9,Bosnia,0.528,0.094,0.038,0.04,0.02,0.021,0.04,0.16502
+8,731431,"Grill, netting and fencing, of iron or steel wire, welded at the intersection, plated or coated with zinc","Wire, ropes, netting and fencing",1,Commission,1,1,1,62.7,China,0.585,0.585,0.086,0.094,0.05,0.055,0.09,0.09637
+9,731439,"Grill, netting and fencing, of iron or steel wire, welded at the intersection","Wire, ropes, netting and fencing",1,Commission,1,1,1,71.7,China,0.479,0.479,0.086,0.094,0.041,0.045,0.09,0.10104
+10,731441,"Grill, netting and fencing, of iron or steel wire, not welded at the intersection, plated or coated with zinc","Wire, ropes, netting and fencing",1,Commission,1,1,1,68.3,China,0.472,0.472,0.078,0.081,0.037,0.038,0.04,0.08648
+11,731442,"Grill, netting and fencing, of iron or steel wire, not welded at the intersection, coated with plastics","Wire, ropes, netting and fencing",1,Council,0,1,1,26.9,China,0.754,0.754,0.073,0.074,0.055,0.056,0.02,0.08617
+12,731449,"Grill, netting and fencing, of iron or steel wire, not welded at the intersection","Wire, ropes, netting and fencing",1,Commission,1,1,1,76.9,China,0.321,0.321,0.078,0.081,0.025,0.026,0.04,0.0699
+13,731450,"Expanded metal, of iron or steel","Wire, ropes, netting and fencing",1,Council,0,1,1,24.1,Britain,0.451,0.221,0.097,0.113,0.044,0.051,0.15,0.07763
+14,731511,Roller chain of iron or steel,Other iron and steel articles,2,Parliament,0,0,1,321.9,China,0.511,0.511,0.444,0.674,0.227,0.345,0.55,0.02783
+15,731512,Articulated link chain of iron or steel,Other iron and steel articles,1,Parliament,0,0,1,96.1,China,0.609,0.609,0.179,0.369,0.109,0.225,0.63,0.0309
+16,731519,"Parts of articulated link chain, of iron or steel",Other iron and steel articles,1,Parliament,0,0,1,43.2,China,0.4,0.4,0.602,1.0,0.241,0.4,1.61,0.0258
+17,731520,"Skid chain for motor vehicles, of iron or steel",Other iron and steel articles,1,Parliament,0,0,1,38.3,China,0.759,0.759,0.233,0.488,0.177,0.37,0.68,0.05417
+18,731581,Stud-link of iron or steel,Other iron and steel articles,1,Parliament,0,0,1,20.2,China,0.895,0.895,0.561,1.0,0.501,0.895,1.05,0.10492
+19,731582,Welded link chain of iron or steel,Other iron and steel articles,1,Parliament,0,0,1,81.6,China,0.805,0.805,0.147,0.26,0.118,0.209,0.51,0.0772
+20,731589,"Chain of iron or steel (excl. articulated link chain, skid chain, stud-link chain, welded link chain and parts thereof; watch chains, necklace…",Other iron and steel articles,1,Parliament,0,0,1,67.8,China,0.639,0.639,0.214,0.248,0.137,0.158,0.17,0.05221
+21,731590,"Parts of skid chain, stud-link chain and other chains of heading 7315",Other iron and steel articles,1,Parliament,0,0,1,25.7,China,0.603,0.603,0.21,0.474,0.127,0.286,0.71,0.03842
+22,731600,"Anchors, grapnels and parts thereof, of iron or steel",Other iron and steel articles,1,Parliament,0,0,1,30.4,China,0.663,0.663,0.43,0.709,0.285,0.47,0.69,0.04974
+23,731700,"Nails of iron or steel wire, in strips or coils","Nails, screws and fasteners",3,Commission,1,1,1,255.4,China,0.572,0.572,0.329,0.537,0.188,0.307,0.58,0.07364
+24,731940,Safety pins and other pins of iron or steel,Other iron and steel articles,1,Parliament,0,0,1,9.5,China,0.628,0.628,0.576,0.784,0.362,0.493,0.63,0.01391
+25,731990,"Knitting needles, bodkins, crochet hooks, embroidery stilettos and similar articles, of iron or steel",Other iron and steel articles,2,Parliament,0,0,1,18.6,China,0.59,0.59,0.576,0.784,0.34,0.463,0.63,0.0086
+26,732010,"Laminated leaf-springs and leaves therefor, of iron or steel",Springs,3,Council,0,1,1,161.0,Turkey,0.408,0.106,0.2,0.262,0.082,0.107,0.29,0.05921
+27,732020,"Coil compression springs, of iron or steel",Springs,3,Council,0,1,1,205.2,Switzerland,0.217,0.197,0.108,0.152,0.024,0.033,0.28,0.02338
+28,732020,"Helical springs, of iron or steel",Springs,1,Commission,1,1,1,94.4,Switzerland,0.236,0.12,0.213,0.266,0.05,0.063,0.26,0.02558
+29,732090,"Flat spiral springs, of iron or steel",Springs,2,Council,0,1,1,37.7,China,0.21,0.21,0.073,0.094,0.015,0.02,0.25,0.01424
+30,732090,"Springs and leaves for springs, of iron or steel (excl. discs springs, flat spiral springs, helical springs, leaf-springs and leaves therefor,…",Springs,1,Commission,1,1,1,121.5,United States,0.215,0.2,0.122,0.168,0.026,0.036,0.31,0.0935
+31,732111,"Appliances for baking, frying, grilling and cooking and plate warmers, for domestic use, of iron or steel, for gas fuel or for both gas and other…","Stoves, cookers and barbecues",2,Parliament,0,0,1,643.9,China,0.715,0.715,0.658,0.925,0.47,0.661,1.16,0.02983
+32,732112,"Appliances for baking, frying, grilling and cooking and plate warmers, for domestic use, of iron or steel, for liquid fuel","Stoves, cookers and barbecues",1,Parliament,0,0,1,10.2,China,0.678,0.678,0.719,0.85,0.488,0.576,0.55,0.02498
+33,732119,"Appliances for baking, frying, grilling and cooking and plate warmers, for domestic use, of iron or steel, for solid fuel or other non-electric…","Stoves, cookers and barbecues",1,Parliament,0,0,1,206.1,China,0.811,0.811,0.719,0.85,0.583,0.689,0.55,0.04157
+34,732181,"Stoves, heaters, grates, fires, wash boilers, braziers and similar appliances, of iron or steel, for gas fuel or for both gas and other fuels…","Stoves, cookers and barbecues",1,Parliament,0,0,1,86.7,China,0.849,0.849,0.181,0.192,0.153,0.163,0.07,0.02813
+35,732182,"Stoves, heaters, grates, fires, wash boilers, braziers and similar appliances, of iron or steel, for liquid fuel (excl. cooking appliances,…","Stoves, cookers and barbecues",1,Parliament,0,0,1,60.5,Japan,0.49,0.227,0.64,0.753,0.314,0.369,0.42,0.02156
+36,732189,"Stoves, heaters, grates, fires, wash boilers, braziers and similar domestic appliances, of iron or steel, for solid fuel or other…","Stoves, cookers and barbecues",1,Parliament,0,0,1,200.1,China,0.442,0.442,0.11,0.127,0.048,0.056,0.15,0.04395
+37,732190,Parts of domestic appliances non-electrically heated of heading 7321,"Stoves, cookers and barbecues",1,Parliament,0,0,1,180.9,China,0.61,0.61,0.283,0.445,0.173,0.271,0.51,0.03899
+38,732211,"Radiators for central heating, non-electrically heated, and parts thereof, of iron or steel",Other iron and steel articles,1,Parliament,0,0,1,12.9,Turkey,0.405,0.243,0.143,0.158,0.058,0.064,0.11,0.05075
+39,732219,"Radiators for central heating, non-electrically heated, and parts thereof, of iron other than cast iron or steel",Other iron and steel articles,1,Parliament,0,0,1,281.0,Turkey,0.81,0.122,0.143,0.158,0.116,0.128,0.11,0.07133
+40,732290,"Air heaters and hot-air distributors, incl. distributors which can also distribute fresh or conditioned air, non-electrically heated,…",Other iron and steel articles,1,Parliament,0,0,1,50.2,China,0.451,0.451,0.124,0.184,0.056,0.083,0.37,0.0156
+41,732310,"Iron or steel wool; pot scourers and scouring or polishing pads, gloves and the like, of iron or steel",Household and sanitary articles,1,Parliament,0,0,1,33.3,China,0.862,0.862,0.653,0.881,0.563,0.759,0.75,0.04031
+42,732391,"Table, kitchen or other household articles, and parts thereof, of cast iron, not enamelled (excl. cans, boxes and similar containers of heading…",Household and sanitary articles,1,Parliament,0,0,1,43.4,China,0.87,0.87,0.446,1.0,0.388,0.87,1.04,0.05265
+43,732392,"Table, kitchen or other household articles, and parts thereof, of cast iron, enamelled (excl. cans, boxes and similar containers of heading 7310;…",Household and sanitary articles,1,Parliament,0,0,1,87.1,China,0.859,0.859,0.446,1.0,0.383,0.859,1.04,0.04096
+44,732393,"Table, kitchen or other household articles, and parts thereof, of stainless steel (excl. cans, boxes and similar containers of heading 7310; waste…",Household and sanitary articles,1,Council,0,1,1,1259.4,China,0.824,0.824,0.502,0.6,0.414,0.495,0.33,0.02325
+45,732394,"Table, kitchen or other household articles, and parts thereof, of iron other than cast iron or steel other than stainless, enamelled (excl. cans,…",Household and sanitary articles,1,Commission,1,1,1,68.6,China,0.595,0.595,0.203,0.236,0.121,0.141,0.18,0.03023
+46,732399,"Table, kitchen or other household articles, and parts thereof, of iron other than cast iron or steel other than stainless (excl. enamelled…",Household and sanitary articles,1,Commission,1,1,1,524.0,China,0.808,0.808,0.535,0.646,0.432,0.522,0.37,0.03908
+47,732410,"Sinks and washbasins, of stainless steel",Household and sanitary articles,1,Parliament,0,0,1,118.2,China,0.557,0.557,0.205,0.252,0.114,0.14,0.23,0.01766
+48,732421,"Baths of cast iron, whether or not enamelled",Household and sanitary articles,1,Parliament,0,0,1,2.0,China,0.812,0.812,0.021,0.027,0.017,0.022,0.22,0.05322
+49,732429,Baths of steel sheet,Household and sanitary articles,1,Parliament,0,0,1,4.3,China,0.696,0.696,0.021,0.027,0.015,0.019,0.22,0.02548
+50,732490,"Sanitary ware, incl. parts thereof (excl. cans, boxes and similar containers of heading 7310, small wall cabinets for medical supplies or…",Household and sanitary articles,1,Parliament,0,0,1,255.8,China,0.772,0.772,0.342,0.456,0.264,0.352,0.38,0.01626
+51,732510,Articles of non-malleable cast iron,Other iron and steel articles,1,Commission,1,1,1,406.0,China,0.386,0.386,0.321,0.396,0.124,0.153,0.28,0.08219
+52,732591,"Grinding balls and similar articles for mills, cast",Other iron and steel articles,1,Commission,1,1,1,42.7,Thailand,0.361,0.232,0.486,0.617,0.175,0.223,0.41,0.1133
+53,732599,Articles of cast steel,Other iron and steel articles,2,Commission,1,1,1,811.2,China,0.331,0.331,0.486,0.617,0.161,0.204,0.41,0.06319
+54,741510,"Nails, tacks, drawing pins, staples and similar articles, of copper or with shafts of iron or steel and heads of copper","Nails, screws and fasteners",1,Commission,1,1,1,8.1,Taiwan,0.427,0.185,0.329,0.537,0.14,0.229,0.58,0.00742
+55,761510,"Table, kitchen or other household articles and parts thereof, and pot scourers and scouring or polishing pads, gloves and the like, of uncast…",Household and sanitary articles,3,Parliament,0,0,1,809.7,China,0.86,0.86,0.458,0.608,0.394,0.523,0.45,0.02287
+56,761520,"Sanitary ware and parts thereof, of aluminium",Household and sanitary articles,1,Parliament,0,0,1,33.3,China,0.676,0.676,0.095,0.1,0.064,0.067,0.06,0.01889
+57,820210,"Handsaws, with working parts of base metal",Saw blades and metal-working tools,1,Council,0,1,0,57.8,China,0.632,0.632,0.425,0.581,0.269,0.367,0.47,0.01662
+58,820231,"Circular saw blades, incl. slitting or slotting saw blades, of base metal, with working parts of steel",Saw blades and metal-working tools,1,Council,0,1,0,56.1,China,0.612,0.612,0.295,1.0,0.181,0.612,1.32,0.01035
+59,820240,Chainsaw blades of base metal,Saw blades and metal-working tools,1,Council,0,1,0,155.3,Switzerland,0.579,0.175,0.784,1.0,0.454,0.579,1.39,0.00516
+60,820299,"Saw blades, incl. toothless saw blades, of base metal, for working materials other than metal",Saw blades and metal-working tools,2,Council,0,1,0,174.6,Switzerland,0.6,0.211,0.784,1.0,0.47,0.6,1.39,0.00394
+61,820730,"Interchangeable tools for pressing, stamping or punching, for working metal",Saw blades and metal-working tools,2,Parliament,0,0,1,747.6,China,0.459,0.459,0.172,0.203,0.079,0.093,0.18,0.00918
+62,830210,"Hinges of all kinds, of base metal","Mountings, fittings and closures",1,Council,0,1,1,477.7,China,0.541,0.541,0.205,0.397,0.111,0.215,0.61,0.0222
+63,830220,Castors with mountings of base metal,"Mountings, fittings and closures",1,Parliament,0,0,1,120.7,China,0.674,0.674,0.174,0.207,0.118,0.139,0.19,0.02458
+64,830230,"Base metal mountings, fittings and similar articles suitable for motor vehicles","Mountings, fittings and closures",1,Council,0,1,1,586.7,China,0.506,0.506,0.233,0.349,0.118,0.176,0.43,0.0134
+65,830241,Base metal mountings and fittings suitable for doors,"Mountings, fittings and closures",3,Council,0,1,1,797.6,China,0.695,0.695,0.173,0.215,0.12,0.149,0.23,0.01718
+66,830242,"Base metal mountings, fittings and similar articles suitable for furniture","Mountings, fittings and closures",1,Commission,1,1,1,997.9,China,0.696,0.696,0.225,0.335,0.156,0.233,0.42,0.03196
+67,830249,"Base metal mountings, fittings and similar articles","Mountings, fittings and closures",1,Commission,1,1,1,591.6,China,0.376,0.376,0.472,0.7,0.178,0.264,0.62,0.01075
+68,830260,Automatic door closers of base metal,"Mountings, fittings and closures",1,Council,0,1,1,167.0,China,0.423,0.423,0.165,0.203,0.07,0.086,0.23,0.01159
+69,830910,Crown corks of base metal,"Mountings, fittings and closures",1,Council,0,1,1,6.3,Serbia,0.515,0.213,0.015,0.02,0.008,0.01,0.22,0.02896
+70,830990,Capsules of lead; capsules of aluminium of a diameter > 21 mm,"Mountings, fittings and closures",1,Council,0,1,1,63.9,Britain,0.382,0.099,0.036,0.041,0.014,0.016,0.14,0.00697
+71,830990,"Stoppers, caps and lids, incl. screw caps and pouring stoppers, capsules for bottles, threaded bungs, bung covers, seals and other packing…","Mountings, fittings and closures",1,Commission,1,1,1,551.1,China,0.368,0.368,0.142,0.226,0.052,0.083,0.44,0.01907
+72,840219,"Vapour generating boilers, incl. hybrid boilers",Boilers and steam turbines,2,Council,0,1,0,46.7,China,0.27,0.27,0.035,0.041,0.009,0.011,0.16,0.01058
+73,840220,Superheated water boilers,Boilers and steam turbines,1,Council,0,1,0,8.7,Norway,0.395,0.055,0.113,,0.045,,1.33,0.008
+74,840290,Parts of vapour generating boilers and superheated water boilers,Boilers and steam turbines,1,Council,0,1,0,160.3,China,0.551,0.551,0.133,0.218,0.073,0.12,0.45,0.01967
+75,840310,"Central heating boilers, non-electric",Boilers and steam turbines,2,Council,0,1,0,543.1,Turkey,0.622,0.014,0.09,0.11,0.056,0.068,0.2,0.0099
+76,840390,Parts of central heating boilers,Boilers and steam turbines,2,Council,0,1,0,143.6,China,0.242,0.242,0.056,0.073,0.014,0.018,0.24,0.01672
+77,840610,Steam and other vapour turbines for marine propulsion,Boilers and steam turbines,1,Council,0,1,0,3.3,United States,0.903,0.007,0.031,0.045,0.028,0.041,0.32,0.00059
+78,840681,"Steam and other vapour turbines, of an output > 40 MW",Boilers and steam turbines,1,Council,0,1,0,2.1,China,0.832,0.832,0.031,0.045,0.026,0.038,0.32,0.01085
+79,840682,"Steam and other vapour turbines, of an output <= 40 MW",Boilers and steam turbines,1,Council,0,1,0,20.2,Brazil,0.53,0.013,0.031,0.045,0.017,0.024,0.32,0.00344
+80,840690,Parts of steam turbines and other vapour turbines,Boilers and steam turbines,2,Council,0,1,0,165.9,China,0.3,0.3,0.119,0.239,0.036,0.072,0.57,0.00607
+81,840734,"Spark-ignition reciprocating piston engine, of a kind used for vehicles of chapter 87, new, of a cylinder capacity > 1.500 cm³ (excl. those used…","Engines, turbines and parts",3,Council,0,1,0,1766.6,Britain,0.442,0.131,0.663,0.05,0.293,0.022,7309.81,0.00679
+82,840820,"Compression-ignition internal combustion piston engine diesel or semi-diesel engine for wheeled agricultural or forestry tractors, of a power > 50…","Engines, turbines and parts",3,Council,0,1,1,137.4,India,0.256,0.25,0.055,0.061,0.014,0.016,0.09,0.01218
+83,840820,"Compression-ignition internal combustion piston engine diesel or semi-diesel engine for vehicles of chapter 87, of a power > 200 kW","Engines, turbines and parts",5,Commission,1,1,1,937.9,Britain,0.48,0.061,0.07,0.102,0.034,0.049,0.33,0.00987
+84,840890,"Compression-ignition internal combustion piston engine diesel or semi-diesel engine, new, of a power > 300 kW but <= 500 kW","Engines, turbines and parts",2,Commission,1,1,1,418.5,United States,0.436,0.087,0.392,0.723,0.171,0.315,0.75,0.00742
+85,840890,"Compression-ignition internal combustion piston engine diesel or semi-diesel engine, new, of a power > 100 kW but <= 200 kW","Engines, turbines and parts",4,Parliament,0,0,1,607.1,Britain,0.447,0.069,0.233,0.381,0.104,0.17,0.5,0.00811
+86,840910,Parts suitable for use solely or principally with internal combustion piston engine for aircraft,"Engines, turbines and parts",1,Parliament,0,0,1,56.7,United States,0.549,0.017,0.265,0.451,0.145,0.248,0.56,0.00055
+87,840991,Parts suitable for use solely or principally with spark-ignition internal combustion piston engine,"Engines, turbines and parts",1,Parliament,0,0,1,2946.8,China,0.187,0.187,0.246,0.381,0.046,0.071,0.47,0.00657
+88,840999,Parts suitable for use solely or principally with compression-ignition internal combustion piston engine diesel or semi-diesel engine,"Engines, turbines and parts",1,Parliament,0,0,1,4207.6,Turkey,0.236,0.181,0.252,0.473,0.06,0.112,0.62,0.01132
+89,841090,Parts of hydraulic turbines and water wheels incl. regulators,"Engines, turbines and parts",1,Council,0,1,0,25.4,Turkey,0.326,0.236,0.074,0.147,0.024,0.048,0.54,0.01012
+90,841181,Gas turbines of a power <= 5.000 kW,"Engines, turbines and parts",1,Council,0,1,0,447.2,United States,0.68,0.008,0.319,0.718,0.217,0.488,0.82,0.00027
+91,841182,Gas turbines of a power > 5.000 kW but <= 20.000 kW,"Engines, turbines and parts",3,Council,0,1,0,691.0,United States,0.842,0.002,0.319,0.718,0.269,0.604,0.82,0.00059
+92,841191,Parts of turbojets or turbopropellers,"Engines, turbines and parts",1,Council,0,1,0,17969.4,United States,0.692,0.048,0.588,1.0,0.407,0.692,1.22,0.0001
+93,841199,Parts of gas turbines,"Engines, turbines and parts",1,Council,0,1,0,3890.9,United States,0.443,0.178,0.649,1.0,0.288,0.443,2.45,0.00192
+94,841311,"Pumps fitted or designed to be fitted with a measuring device, for dispensing fuel or lubricants, of the type used in filling stations or in garages",Pumps and compressors,1,Parliament,0,0,1,82.7,Britain,0.821,0.069,0.23,0.358,0.189,0.294,0.47,0.00585
+95,841319,"Pumps for liquids, fitted or designed to be fitted with a measuring device",Pumps and compressors,1,Parliament,0,0,1,105.1,United States,0.402,0.206,0.661,,0.266,,6.38,0.00324
+96,841320,Hand pumps for liquids,Pumps and compressors,1,Parliament,0,0,1,121.3,China,0.622,0.622,0.434,0.771,0.27,0.479,0.77,0.01574
+97,841330,"Fuel, lubricating or cooling medium pumps for internal combustion piston engine",Pumps and compressors,2,Commission,1,1,1,1072.9,China,0.215,0.215,0.291,1.0,0.062,0.215,1.05,0.00463
+98,841340,Concrete pumps,Pumps and compressors,1,Parliament,0,0,1,49.0,Turkey,0.513,0.116,0.338,1.0,0.173,0.513,1.42,0.015
+99,841350,Hydraulic fluid power piston pumps,Pumps and compressors,5,Parliament,0,0,1,658.5,United States,0.281,0.158,0.202,0.4,0.057,0.113,0.98,0.00442
+100,841360,"Rotary positive displacement pumps, power-driven",Pumps and compressors,7,Parliament,0,0,1,622.0,United States,0.362,0.152,0.202,0.424,0.073,0.153,0.55,0.004
+101,841370,"Pumps, power-driven, with a discharge outlet diameter <= 15 mm",Pumps and compressors,1,Commission,1,1,1,45.8,China,0.495,0.495,0.234,0.323,0.116,0.16,0.36,0.00826
+102,841370,"Submersible pumps, single-stage",Pumps and compressors,10,Parliament,0,0,1,944.9,China,0.455,0.455,0.16,0.42,0.073,0.191,0.62,0.01554
+103,841381,"Pumps for liquids, power-driven (excl. those of subheading 8413.11 and 8413.19, fuel, lubricating or cooling medium pumps for internal combustion…",Pumps and compressors,1,Parliament,0,0,1,471.4,China,0.324,0.324,0.278,0.729,0.09,0.237,0.86,0.00707
+104,841382,Liquid elevators,Pumps and compressors,1,Parliament,0,0,1,17.2,China,0.635,0.635,0.278,0.729,0.177,0.463,0.86,0.01655
+105,841391,Parts of pumps for liquids,Pumps and compressors,1,Parliament,0,0,1,1656.2,China,0.348,0.348,0.29,0.674,0.101,0.235,0.8,0.00936
+106,841392,Parts of liquid elevators,Pumps and compressors,1,Parliament,0,0,1,11.6,China,0.316,0.316,0.29,0.674,0.092,0.213,0.8,0.01074
+107,841460,"Hoods incorporating a fan, whether or not fitted with filters, having a maximum horizontal side <= 120 cm",Pumps and compressors,1,Parliament,0,0,1,220.3,China,0.596,0.596,0.169,0.227,0.101,0.135,0.3,0.019
+108,841581,Air conditioning machines incorporating a refrigerating unit and a valve for reversal of the cooling-heat cycle reversible heat pumps (excl. of a…,"Refrigeration, air-con and heat pumps",1,Parliament,0,0,1,678.8,China,0.584,0.584,0.281,0.342,0.164,0.2,0.25,0.01169
+109,841590,"Parts of air conditioning machines, comprising a motor-driven fan and elements for changing the temperature and humidity","Refrigeration, air-con and heat pumps",1,Parliament,0,0,1,2833.9,China,0.299,0.299,0.42,0.573,0.125,0.171,0.46,0.00951
+110,841610,Furnace burners for liquid fuel,Furnaces and industrial heating,2,Commission,1,1,1,12.9,China,0.301,0.301,0.064,0.099,0.019,0.03,0.38,0.00874
+111,841620,Furnace burners for pulverised solid fuel or gas,Furnaces and industrial heating,3,Commission,1,1,1,30.2,United States,0.221,0.162,0.055,0.253,0.012,0.056,0.83,0.00718
+112,841690,"Parts of furnace burners such as mechanical stokers, incl. their mechanical grates, mechanical ash dischargers and similar appliances",Furnaces and industrial heating,1,Commission,1,1,1,88.8,United States,0.285,0.262,0.184,0.682,0.052,0.194,0.89,0.00499
+113,841780,"Industrial or laboratory furnaces, incl. incinerators, non-electric (excl. for the roasting, melting or other heat treatment of ores, pyrites or…",Furnaces and industrial heating,3,Council,0,1,0,54.5,China,0.645,0.645,0.046,0.063,0.03,0.041,0.28,0.0171
+114,841790,"Parts of industrial or laboratory furnaces, non-electric, incl. incinerators",Furnaces and industrial heating,1,Council,0,1,1,230.1,China,0.314,0.314,0.369,,0.116,,1.99,0.01535
+115,841810,"Combined refrigerator-freezers, of a capacity > 340 l, fitted with separate external doors or drawers or combinations thereof","Refrigeration, air-con and heat pumps",2,Commission,1,1,1,1822.3,China,0.611,0.611,0.423,0.512,0.258,0.313,0.3,0.0319
+116,841821,"Household refrigerators compression-type, of a capacity <= 250 l","Refrigeration, air-con and heat pumps",5,Council,0,1,1,541.1,China,0.615,0.615,0.397,0.492,0.244,0.303,0.33,0.03186
+117,841829,"Household refrigerators, absorption-type","Refrigeration, air-con and heat pumps",1,Council,0,1,1,60.4,China,0.837,0.837,0.458,0.568,0.383,0.476,0.36,0.02315
+118,841830,"Freezers of the chest type, of a capacity <= 400 l","Refrigeration, air-con and heat pumps",2,Council,0,1,1,191.7,China,0.694,0.694,0.285,0.354,0.198,0.246,0.27,0.03
+119,841840,"Freezers of the upright type, of a capacity > 250 l but <= 900 l","Refrigeration, air-con and heat pumps",2,Council,0,1,1,377.2,China,0.44,0.44,0.511,0.683,0.225,0.301,0.52,0.02712
+120,841850,"Refrigerated show-cases and counters, with a refrigerating unit or evaporator","Refrigeration, air-con and heat pumps",2,Council,0,1,1,696.5,China,0.554,0.554,0.22,0.301,0.122,0.166,0.34,0.02179
+121,841850,"Refrigerated show-cases and counters, with a refrigerating unit or evaporator, for frozen food storage","Refrigeration, air-con and heat pumps",1,Parliament,0,0,1,33.5,China,0.576,0.576,0.037,0.043,0.021,0.025,0.15,0.02195
+122,841861,Heat pumps,"Refrigeration, air-con and heat pumps",1,Council,0,1,1,1119.8,China,0.583,0.583,0.202,0.231,0.118,0.135,0.16,0.00904
+123,841869,Refrigerating or freezing equipment,"Refrigeration, air-con and heat pumps",1,Council,0,1,1,731.9,China,0.426,0.426,0.149,0.257,0.063,0.109,0.5,0.00742
+124,841891,Furniture designed to receive refrigerating or freezing equipment,"Refrigeration, air-con and heat pumps",1,Parliament,0,0,1,23.5,China,0.725,0.725,0.077,0.089,0.055,0.064,0.15,0.01431
+125,841899,Evaporators and condensers for refrigerating equipment,"Refrigeration, air-con and heat pumps",1,Council,0,1,1,214.9,China,0.447,0.447,0.333,0.595,0.149,0.266,0.66,0.01005
+126,841899,Parts of refrigerating or freezing equipment and heat pumps,"Refrigeration, air-con and heat pumps",1,Commission,1,1,1,503.1,China,0.441,0.441,0.207,0.292,0.091,0.129,0.37,0.01173
+127,841911,Instantaneous gas water heaters,Furnaces and industrial heating,1,Council,0,1,1,98.5,China,0.834,0.834,0.163,0.203,0.136,0.169,0.23,0.00948
+128,841912,Solar water heaters,Furnaces and industrial heating,1,Council,0,1,1,37.4,China,0.772,0.772,0.16,0.206,0.123,0.159,0.27,0.02657
+129,841919,"Instantaneous or storage water heaters, non-electric",Furnaces and industrial heating,1,Council,0,1,1,212.0,Britain,0.368,0.175,0.163,0.203,0.06,0.075,0.23,0.0161
+130,841939,"Dryers (excl. lyophilisation apparatus, freeze drying units, spray dryers, dryers for agricultural products, for wood, paper pulp, paper or…",Furnaces and industrial heating,1,Parliament,0,0,1,136.5,South Korea,0.221,0.216,0.127,0.249,0.028,0.055,0.56,0.00707
+131,841950,Heat-exchange units,Furnaces and industrial heating,2,Parliament,0,0,1,1276.6,China,0.289,0.289,0.253,0.484,0.073,0.14,0.62,0.00746
+132,841981,"Machinery, plant and equipment for cooking or heating food",Furnaces and industrial heating,1,Council,0,1,1,439.6,United States,0.299,0.19,0.178,0.307,0.053,0.092,0.51,0.00495
+133,841989,"Machinery, plant or laboratory equipment, whether or not electrically heated, for the treatment of materials by a process involving a change of…",Furnaces and industrial heating,2,Commission,1,1,1,905.3,United States,0.17,0.162,0.214,0.811,0.036,0.138,0.92,0.0052
+134,841990,"Parts of machinery, plant and laboratory equipment, whether or not electrically heated, for the treatment of materials by a process involving a…",Furnaces and industrial heating,1,Commission,1,1,1,684.9,China,0.414,0.414,0.256,0.788,0.106,0.327,0.91,0.00841
+135,841990,"Parts of medical, surgical or laboratory sterilizers",Furnaces and industrial heating,1,Parliament,0,0,1,21.2,Switzerland,0.429,0.275,0.256,0.788,0.11,0.338,0.91,0.00421
+136,842091,Cylinders for calendering or other rolling machines,Other industrial machinery,2,Commission,1,1,1,53.2,Switzerland,0.403,0.199,0.138,0.219,0.056,0.088,0.43,0.01338
+137,842121,Machinery and apparatus for filtering or purifying water,Other industrial machinery,1,Parliament,0,0,1,1049.3,China,0.312,0.312,0.209,0.424,0.065,0.133,0.64,0.00775
+138,842123,Oil or petrol-filters for internal combustion engines,Other industrial machinery,1,Commission,1,1,1,770.6,China,0.25,0.25,0.302,0.725,0.076,0.181,0.84,0.01099
+139,842129,"Machinery and apparatus for filtering or purifying liquids (excl. such machinery and apparatus for water and other beverages, oil or petrol…",Other industrial machinery,2,Parliament,0,0,1,1516.4,United States,0.49,0.068,0.404,0.932,0.198,0.456,1.32,0.00233
+140,842131,Intake air filters for internal combustion engines,Other industrial machinery,1,Parliament,0,0,1,359.3,China,0.242,0.242,0.196,0.283,0.047,0.068,0.38,0.01063
+141,842139,Machinery and apparatus for filtering or purifying air,Other industrial machinery,2,Council,0,1,1,1466.2,South Africa,0.202,0.17,0.282,0.541,0.057,0.11,0.68,0.00426
+142,842199,Parts of machinery and apparatus for filtering or purifying liquids or gases,Other industrial machinery,2,Council,0,1,1,1420.1,China,0.308,0.308,0.37,0.968,0.114,0.298,1.24,0.00715
+143,842211,Dishwashing machines of the household type,Other industrial machinery,1,Parliament,0,0,1,808.5,Turkey,0.549,0.402,0.219,0.3,0.12,0.164,0.34,0.0272
+144,842410,"Fire extinguishers, whether or not charged",Other industrial machinery,1,Council,0,1,1,176.5,China,0.528,0.528,0.124,0.153,0.065,0.081,0.22,0.03358
+145,842420,Spray guns and similar appliances,Other industrial machinery,1,Parliament,0,0,1,270.8,China,0.525,0.525,0.606,1.0,0.318,0.525,1.39,0.01004
+146,842430,"Water cleaning appliances with built-in motor, without heating device",Other industrial machinery,4,Commission,1,1,1,362.2,China,0.791,0.791,0.271,0.524,0.215,0.414,0.66,0.01621
+147,842441,"Agricultural or horticultural sprayers, portable",Other industrial machinery,1,Council,0,1,1,59.5,China,0.778,0.778,0.371,0.503,0.289,0.392,0.42,0.02199
+148,842449,Agricultural or horticultural sprayers,Other industrial machinery,2,Parliament,0,0,1,44.0,United States,0.326,0.139,0.098,0.149,0.032,0.048,0.32,0.02513
+149,842482,"Agricultural or horticultural mechanical appliances, whether or not hand-operated, for projecting or dispersing liquids or powders",Other industrial machinery,1,Council,0,1,1,43.5,Mexico,0.286,0.227,0.133,0.203,0.038,0.058,0.4,0.01068
+150,842482,"Agricultural or horticultural watering appliances, whether or not hand-operated",Other industrial machinery,1,Commission,1,1,1,172.7,China,0.21,0.21,0.238,0.349,0.05,0.073,0.42,0.01749
+151,842489,"Mechanical appliances, whether or not hand-operated, for projecting, dispersing or spraying liquids or powders",Other industrial machinery,2,Commission,1,1,1,531.4,China,0.507,0.507,0.211,0.372,0.107,0.189,0.55,0.00826
+152,842490,"Parts of fire extinguishers, spray guns and similar appliances, steam or sand blasting machines and similar jet projecting machines and machinery…",Other industrial machinery,2,Commission,1,1,1,717.5,China,0.257,0.257,0.339,0.757,0.087,0.195,0.84,0.00943
+153,842531,Winches and capstans powered by electric motor,Lifting and handling equipment,1,Commission,1,1,1,124.4,China,0.369,0.369,0.244,0.561,0.09,0.207,0.75,0.01454
+154,842539,"Winches and capstans, non-powered by electric motor",Lifting and handling equipment,1,Commission,1,1,1,100.6,United States,0.234,0.225,0.244,0.561,0.057,0.132,0.75,0.02418
+155,842542,"Jacks and hoists, hydraulic",Lifting and handling equipment,1,Commission,1,1,1,245.2,China,0.64,0.64,0.202,0.254,0.13,0.162,0.25,0.03484
+156,842549,"Jacks and hoists of a kind used for raising vehicles, not hydraulic",Lifting and handling equipment,1,Parliament,0,0,1,105.7,China,0.524,0.524,0.336,0.647,0.176,0.339,0.72,0.03
+157,842611,Overhead travelling cranes on fixed support,Lifting and handling equipment,1,Council,0,1,1,21.5,China,0.308,0.308,0.027,0.037,0.008,0.011,0.28,0.03016
+158,842619,"Overhead travelling cranes, transporter cranes, gantry cranes, bridge cranes and mobile lifting frames",Lifting and handling equipment,1,Commission,1,1,1,78.3,China,0.697,0.697,0.079,0.104,0.055,0.072,0.26,0.02394
+159,842620,Tower cranes,Lifting and handling equipment,1,Council,0,1,1,46.4,Britain,0.396,0.202,0.08,0.12,0.032,0.048,0.36,0.04685
+160,842630,Portal or pedestal jib cranes,Lifting and handling equipment,1,Council,0,1,1,91.0,China,0.677,0.677,0.08,0.12,0.055,0.081,0.36,0.02055
+161,842641,"Mobile cranes and works trucks fitted with a crane, self-propelled, on tyres",Lifting and handling equipment,1,Council,0,1,1,78.4,China,0.418,0.418,0.195,,0.081,,1.92,0.02415
+162,842649,"Mobile cranes and works trucks fitted with a crane, self-propelled",Lifting and handling equipment,1,Council,0,1,1,108.9,China,0.267,0.267,0.195,,0.052,,1.92,0.02738
+163,842691,Cranes designed for mounting on road vehicles,Lifting and handling equipment,2,Council,0,1,1,24.8,United States,0.302,0.179,0.011,0.015,0.003,0.005,0.28,0.01481
+164,842699,"Ships' derricks; cranes, incl. cable cranes (excl. overhead travelling cranes, transporter cranes, gantry cranes, portal or pedestal jib cranes,…",Lifting and handling equipment,1,Commission,1,1,1,42.2,Britain,0.269,0.14,0.028,0.033,0.007,0.009,0.17,0.02231
+165,842710,"Self-propelled works trucks powered by an electric motor, with a lifting height >= 1 m",Lifting and handling equipment,2,Council,0,1,1,919.9,China,0.591,0.591,0.114,0.152,0.067,0.09,0.29,0.02476
+166,842720,"Works trucks, self-propelled, with a lifting height >= 1 m, non- powered with an electric motor",Lifting and handling equipment,3,Council,0,1,1,895.8,Britain,0.512,0.342,0.195,0.358,0.1,0.184,0.57,0.02523
+167,842790,"Works trucks fitted with lifting or handling equipment, not self-propelled",Lifting and handling equipment,1,Commission,1,1,1,167.2,China,0.416,0.416,0.277,0.511,0.115,0.212,0.63,0.04017
+168,842810,"Lifts and skip hoists, electrically operated",Lifting and handling equipment,2,Council,0,1,1,206.9,China,0.411,0.411,0.055,0.091,0.022,0.037,0.4,0.02322
+169,842820,Pneumatic elevators and conveyors,Lifting and handling equipment,2,Commission,1,1,1,63.6,China,0.32,0.32,0.092,0.23,0.029,0.074,0.66,0.01228
+170,842832,"Continuous-action elevators and conveyors for goods or materials, bucket type",Lifting and handling equipment,1,Council,0,1,1,10.9,China,0.632,0.632,0.049,0.066,0.031,0.042,0.27,0.01753
+171,842833,"Continuous-action elevators and conveyors for goods or materials, belt type",Lifting and handling equipment,1,Commission,1,1,1,261.3,China,0.29,0.29,0.076,0.121,0.022,0.035,0.4,0.00768
+172,842839,Roller conveyors,Lifting and handling equipment,1,Council,0,1,1,120.4,China,0.314,0.314,0.078,0.104,0.025,0.033,0.27,0.00924
+173,842839,"Continuous-action conveyors for goods or materials (excl. specially designed for underground use, continuous-action conveyors with buckets or…",Lifting and handling equipment,1,Commission,1,1,1,243.5,China,0.198,0.198,0.07,0.129,0.014,0.026,0.5,0.00838
+174,842870,Industrial robots,Lifting and handling equipment,1,Commission,1,1,1,130.7,Japan,0.395,0.237,0.219,0.429,0.087,0.169,0.63,0.00411
+175,842890,"Lifting, handling, loading or unloading machinery",Lifting and handling equipment,3,Commission,1,1,1,1739.7,China,0.425,0.425,0.215,0.42,0.091,0.178,0.61,0.01453
+176,843010,Pile-drivers and pile-extractors,Construction and mining machinery,1,Parliament,0,0,1,56.6,Britain,0.228,0.072,0.123,0.212,0.028,0.048,0.48,0.01149
+177,843020,Snowploughs and snowblowers,Construction and mining machinery,1,Parliament,0,0,1,78.5,United States,0.395,0.349,0.333,0.441,0.132,0.174,0.37,0.0159
+178,843061,"Tamping or compacting machinery, not self-propelled",Construction and mining machinery,1,Commission,1,1,1,42.0,China,0.612,0.612,0.102,0.139,0.063,0.085,0.29,0.0285
+179,843069,"Earth moving machinery, not self-propelled",Construction and mining machinery,1,Commission,1,1,1,46.1,South Korea,0.206,0.179,0.22,,0.045,,1.31,0.01617
+180,843110,"Parts of pulley tackles and hoists, winches, capstans and jacks",Construction and mining machinery,1,Commission,1,1,1,186.9,China,0.426,0.426,0.138,0.208,0.059,0.089,0.39,0.01851
+181,843120,Parts of fork-lift trucks and other works trucks fitted with lifting or handling equipment,Construction and mining machinery,1,Commission,1,1,1,491.9,China,0.486,0.486,0.138,0.208,0.067,0.101,0.39,0.04216
+182,843131,"Parts of lifts, skip hoists or escalators",Construction and mining machinery,1,Commission,1,1,1,401.2,China,0.543,0.543,0.09,0.112,0.049,0.061,0.22,0.03061
+183,843139,Parts of machinery of heading 8428,Construction and mining machinery,1,Commission,1,1,1,728.0,China,0.312,0.312,0.138,0.208,0.043,0.065,0.39,0.01631
+184,843141,"Buckets, shovels, grabs and grips for machinery of heading 8426, 8429 and 8430",Construction and mining machinery,1,Council,0,1,1,188.9,China,0.255,0.255,0.129,0.186,0.033,0.047,0.35,0.02754
+185,843143,Parts for boring or sinking machinery of subheading 8430.41 or 8430.49,Construction and mining machinery,1,Council,0,1,1,329.8,United States,0.274,0.164,0.159,0.873,0.044,0.239,0.97,0.01018
+186,843149,"Parts of machinery of heading 8426, 8429 and 8430",Construction and mining machinery,2,Commission,1,1,1,2207.6,China,0.415,0.415,0.292,0.669,0.121,0.278,0.8,0.03084
+187,843231,"No-till direct seeders, planters and transplanters",Farm machinery,1,Parliament,0,0,1,21.0,Britain,0.466,0.035,0.042,0.067,0.02,0.031,0.38,0.04666
+188,843239,Central driven precision spacing seeders,Farm machinery,3,Parliament,0,0,1,41.7,Turkey,0.42,0.045,0.042,0.067,0.018,0.028,0.38,0.01582
+189,843241,Manure spreaders,Farm machinery,1,Parliament,0,0,1,9.9,Britain,0.639,0.047,0.051,0.06,0.033,0.038,0.16,0.01973
+190,843280,"Agricultural, horticultural or forestry machinery for soil preparation or cultivation; lawn or sports-ground rollers (excl. sprayers and dusters,…",Farm machinery,1,Commission,1,1,1,85.3,China,0.38,0.38,0.05,0.06,0.019,0.023,0.19,0.02397
+191,843290,"Parts of agricultural, horticultural or forestry machinery for soil preparation or cultivation or of lawn or sports-ground rollers",Farm machinery,1,Commission,1,1,1,294.8,China,0.348,0.348,0.118,0.161,0.041,0.056,0.3,0.03158
+192,845011,"Fully-automatic household or laundry-type washing machines, of a dry linen capacity > 6 kg but <= 10 kg",Laundry and textile machinery,3,Commission,1,1,1,1534.9,China,0.595,0.595,0.313,0.404,0.186,0.24,0.33,0.04197
+193,845012,"Household or laundry-type washing machines, with built-in centrifugal drier",Laundry and textile machinery,1,Commission,1,1,1,46.3,China,0.899,0.899,0.313,0.404,0.281,0.363,0.33,0.03787
+194,845019,"Household or laundry-type washing machines, of a dry linen capacity <= 6 kg",Laundry and textile machinery,1,Commission,1,1,1,16.9,China,0.551,0.551,0.313,0.404,0.172,0.222,0.33,0.05815
+195,845020,"Laundry-type washing machines, of a dry linen capacity > 10 kg",Laundry and textile machinery,1,Parliament,0,0,1,152.5,China,0.693,0.693,0.268,0.604,0.185,0.418,0.76,0.02932
+196,845090,Parts of household or laundry-type washing machines,Laundry and textile machinery,1,Council,0,1,1,104.2,China,0.603,0.603,0.381,1.0,0.23,0.603,1.58,0.01715
+197,845110,Dry-cleaning machines for made-up textile articles,Laundry and textile machinery,1,Parliament,0,0,1,2.1,China,0.656,0.656,0.062,0.175,0.041,0.115,0.69,0.01451
+198,845121,"Drying machines, of a dry linen capacity <= 10 kg",Laundry and textile machinery,1,Commission,1,1,1,525.8,Turkey,0.537,0.349,0.313,0.404,0.168,0.217,0.33,0.02393
+199,845129,"Drying machines for textile yarns, fabrics or made-up textile articles",Laundry and textile machinery,1,Parliament,0,0,1,30.9,Thailand,0.278,0.22,0.132,0.454,0.037,0.126,0.82,0.01372
+200,845130,"Ironing machines and presses, incl. fusing presses",Laundry and textile machinery,1,Parliament,0,0,1,25.5,China,0.582,0.582,0.115,0.256,0.067,0.149,0.62,0.02982
+201,845140,"Machines for washing, bleaching or dyeing textile yarns, fabrics or made-up textile articles",Laundry and textile machinery,1,Parliament,0,0,1,21.4,India,0.306,0.278,0.041,0.092,0.012,0.028,0.58,0.00984
+202,845150,"Machines for reeling, unreeling, folding, cutting or pinking textile fabrics",Laundry and textile machinery,1,Parliament,0,0,1,36.6,China,0.463,0.463,0.093,0.212,0.043,0.098,0.62,0.0065
+203,845180,"Machinery for coating or impregnating textile yarns, fabrics or other made-up textile articles",Laundry and textile machinery,3,Parliament,0,0,1,47.3,Switzerland,0.387,0.253,0.127,1.0,0.049,0.387,1.02,0.0074
+204,845190,"Parts of machines for washing, cleaning, wringing, drying, ironing, pressing, bleaching, dyeing, dressing, finishing, coating or impregnating…",Laundry and textile machinery,1,Parliament,0,0,1,99.2,India,0.263,0.212,0.195,0.333,0.051,0.087,0.51,0.01021
+205,845410,Converters of a kind used in metallurgy or in metal foundries,Other industrial machinery,1,Commission,1,1,1,2.0,China,0.444,0.444,0.08,0.11,0.036,0.049,0.29,0.01353
+206,845420,"Ingot moulds and ladles, of a kind used in metallurgy or in metal foundries",Other industrial machinery,1,Commission,1,1,1,9.3,China,0.511,0.511,0.08,0.11,0.041,0.056,0.29,0.03542
+207,845430,Machines for casting under pressure of a kind used in metallurgy or in metal foundries,Other industrial machinery,2,Commission,1,1,1,54.1,Switzerland,0.446,0.241,0.08,0.11,0.036,0.049,0.29,0.00723
+208,845490,"Parts of converters, ladles, ingot moulds and casting machines of a kind used in metallurgy or in metal foundries",Other industrial machinery,1,Council,0,1,1,110.4,China,0.36,0.36,0.102,0.145,0.037,0.052,0.33,0.01081
+209,845510,Mills for rolling metal tubes,Other industrial machinery,1,Parliament,0,0,1,7.6,China,0.325,0.325,0.012,0.014,0.004,0.005,0.18,0.01246
+210,845521,Hot or combination hot and cold metal-rolling mills,Other industrial machinery,1,Parliament,0,0,1,9.2,South Korea,0.624,0.222,0.012,0.014,0.007,0.009,0.18,0.01159
+211,845522,Cold-rolling mills for metal,Other industrial machinery,1,Parliament,0,0,1,21.4,China,0.552,0.552,0.038,0.055,0.021,0.03,0.33,0.0186
+212,845530,"Rolls for metal-rolling mills, of cast or wrought steel",Other industrial machinery,4,Parliament,0,0,1,173.2,China,0.391,0.391,0.299,0.777,0.117,0.304,0.88,0.02859
+213,845590,Parts of metal-rolling mills,Other industrial machinery,1,Parliament,0,0,1,145.0,China,0.481,0.481,0.055,0.08,0.026,0.039,0.34,0.0182
+214,846410,"Sawing machines for working stone, ceramics, concrete, asbestos-cement or like mineral materials or for cold-working glass",Other industrial machinery,1,Commission,1,1,1,50.1,China,0.672,0.672,0.119,0.196,0.08,0.132,0.45,0.02088
+215,846490,"Machine tools for working stones, concrete, asbestos cement or similar mineral substances or for cold-working glass (excl. sawing machines,…",Other industrial machinery,1,Commission,1,1,1,40.6,China,0.557,0.557,0.042,0.06,0.024,0.033,0.31,0.01587
+216,847410,"Sorting, screening, separating or washing machines for solid mineral substances, incl. those in powder or paste form",Construction and mining machinery,1,Commission,1,1,1,218.7,Britain,0.637,0.048,0.175,0.381,0.112,0.243,0.65,0.01894
+217,847420,Crushing or grinding machines for solid mineral substances,Construction and mining machinery,1,Commission,1,1,1,247.0,Britain,0.454,0.14,0.175,0.381,0.08,0.173,0.65,0.01872
+218,847431,Concrete or mortar mixers,Construction and mining machinery,1,Parliament,0,0,1,75.9,China,0.37,0.37,0.115,0.174,0.043,0.064,0.38,0.03189
+219,847439,"Machinery for mixing or kneading solid mineral substances, incl. those in powder or paste form",Construction and mining machinery,1,Commission,1,1,1,31.9,China,0.239,0.239,0.175,0.381,0.042,0.091,0.65,0.01009
+220,847480,"Machinery for agglomerating, shaping or moulding solid mineral fuels, unhardened cements, plastering materials and other mineral products in…",Construction and mining machinery,2,Parliament,0,0,1,56.5,China,0.329,0.329,0.06,0.328,0.02,0.108,0.87,0.01365
+221,847490,Parts of machinery of heading 8474,Construction and mining machinery,2,Council,0,1,1,597.3,China,0.33,0.33,0.255,1.0,0.084,0.33,1.25,0.02929
+222,847910,"Machinery for public works, building or the like",Other industrial machinery,1,Commission,1,1,1,105.9,United States,0.251,0.239,0.048,0.107,0.012,0.027,0.58,0.01306
+223,847930,Presses for the manufacture of particle board or fibre building board of wood or other ligneous materials or for treating wood or cork,Other industrial machinery,2,Parliament,0,0,1,32.7,China,0.569,0.569,0.023,0.038,0.013,0.022,0.4,0.02297
+224,847960,Evaporative air coolers,Other industrial machinery,1,Parliament,0,0,1,56.7,China,0.722,0.722,0.207,0.36,0.149,0.26,0.54,0.0143
+225,847971,"Passenger boarding bridges, of a kind used in airports",Other industrial machinery,1,Parliament,0,0,1,11.9,China,0.906,0.906,0.207,0.36,0.187,0.326,0.54,0.01555
+226,847979,Passenger boarding bridges,Other industrial machinery,1,Parliament,0,0,1,4.8,United States,0.197,0.196,0.207,0.36,0.041,0.071,0.54,0.00422
+227,847981,"Machinery for treating metal, incl. electric wire coil-winders, n.e.s. (excl. industrial robots, furnaces, dryers, spray guns and the like,…",Other industrial machinery,1,Parliament,0,0,1,158.9,Switzerland,0.422,0.282,0.09,0.121,0.038,0.051,0.28,0.00403
+228,847989,"Machines, apparatus and mechanical appliances",Other industrial machinery,3,Parliament,0,0,1,5038.2,China,0.252,0.252,0.206,0.359,0.052,0.09,0.54,0.00525
+229,847990,Parts of machines and mechanical appliances having individual functions,Other industrial machinery,3,Council,0,1,1,2202.1,China,0.269,0.269,0.192,0.316,0.052,0.085,0.49,0.0069
+230,848041,Injection or compression-type moulds for metal or metal carbides,Other industrial machinery,1,Parliament,0,0,1,94.8,China,0.564,0.564,0.086,0.095,0.048,0.054,0.11,0.00895
+231,848049,Moulds for metal or metal carbides,Other industrial machinery,1,Council,0,1,1,78.4,China,0.418,0.418,0.12,0.138,0.05,0.058,0.14,0.01058
+232,848050,Moulds for glass,Other industrial machinery,1,Commission,1,1,1,65.7,China,0.588,0.588,0.146,0.224,0.086,0.132,0.41,0.00557
+233,848060,Moulds for mineral materials,Other industrial machinery,1,Parliament,0,0,1,45.9,China,0.208,0.208,0.109,0.223,0.023,0.046,0.57,0.02291
+234,848071,Injection or compression-type moulds for rubber or plastics,Other industrial machinery,1,Council,0,1,1,1617.2,China,0.636,0.636,0.247,0.307,0.157,0.196,0.26,0.00519
+235,848110,Pressure-reducing valves of base metal (not combined with filters or lubricators),"Valves, bearings and gears",3,Parliament,0,0,1,277.4,United States,0.242,0.189,0.19,0.373,0.046,0.09,0.56,0.00358
+236,848120,Valves for the control of oleohydraulic power transmission,"Valves, bearings and gears",2,Parliament,0,0,1,1171.9,United States,0.253,0.095,0.196,0.438,0.05,0.111,0.64,0.0023
+237,848130,"Check non-return valves for pipes, boiler shells, tanks, vats or the like","Valves, bearings and gears",2,Parliament,0,0,1,344.8,United States,0.334,0.304,0.365,1.0,0.122,0.334,1.05,0.00558
+238,848140,Safety or relief valves,"Valves, bearings and gears",2,Parliament,0,0,1,492.9,United States,0.474,0.097,0.343,1.0,0.163,0.474,1.05,0.00216
+239,848180,"Appliances for pipes, boiler shells, tanks, vats or the like (excl. pressure-reducing valves, valves for the control of pneumatic power…","Valves, bearings and gears",17,Parliament,0,0,1,5731.9,China,0.461,0.461,0.239,0.478,0.11,0.221,0.6,0.00657
+240,848190,"Parts of valves and similar articles for pipes, boiler shells, tanks, vats or the like","Valves, bearings and gears",1,Parliament,0,0,1,2630.5,China,0.435,0.435,0.419,0.847,0.182,0.368,0.87,0.00856
+241,848210,Ball bearings with greatest external diameter > 30 mm,"Valves, bearings and gears",2,Parliament,0,0,1,1604.0,China,0.423,0.423,0.34,0.541,0.144,0.229,0.56,0.01094
+242,848220,"Tapered roller bearings, incl. cone and tapered roller assemblies","Valves, bearings and gears",1,Parliament,0,0,1,468.2,China,0.374,0.374,0.258,0.463,0.096,0.173,0.6,0.01513
+243,848230,Spherical roller bearings,"Valves, bearings and gears",1,Parliament,0,0,1,173.7,Britain,0.415,0.29,0.196,0.495,0.081,0.206,0.75,0.00928
+244,848240,Needle roller bearings,"Valves, bearings and gears",1,Parliament,0,0,1,102.2,China,0.442,0.442,0.193,0.307,0.086,0.136,0.46,0.00714
+245,848250,Cylindrical roller bearings,"Valves, bearings and gears",1,Parliament,0,0,1,280.0,United States,0.281,0.252,0.172,0.381,0.048,0.107,0.66,0.00561
+246,848280,"Roller bearings, incl. combined ball-roller bearings","Valves, bearings and gears",1,Parliament,0,0,1,104.0,China,0.348,0.348,0.083,0.1,0.029,0.035,0.18,0.00705
+247,848291,"Balls, needles and rollers for bearings","Valves, bearings and gears",2,Parliament,0,0,1,176.4,China,0.467,0.467,0.175,0.221,0.082,0.103,0.25,0.02347
+248,848299,Parts of ball or roller bearings,"Valves, bearings and gears",1,Parliament,0,0,1,714.2,China,0.447,0.447,0.506,0.775,0.226,0.347,0.7,0.02185
+249,848310,"Main shafts or driving shafts, counter shafts, cam shafts, eccentric shafts and other transmission shafts","Valves, bearings and gears",5,Parliament,0,0,1,1415.5,China,0.294,0.294,0.42,0.938,0.123,0.276,1.15,0.01392
+250,848320,"Bearing housings, incorporating ball or roller bearings, for machinery","Valves, bearings and gears",1,Parliament,0,0,1,173.4,China,0.421,0.421,0.458,0.882,0.193,0.371,0.89,0.0166
+251,848330,Plain shaft bearings for machinery,"Valves, bearings and gears",3,Parliament,0,0,1,1045.0,China,0.324,0.324,0.393,0.915,0.127,0.297,0.94,0.01011
+252,848340,"Gears and gearing, for machinery","Valves, bearings and gears",8,Parliament,0,0,1,1823.1,China,0.293,0.293,0.147,0.242,0.043,0.071,0.42,0.01016
+253,848350,"Flywheels and pulleys, incl. pulley blocks","Valves, bearings and gears",2,Parliament,0,0,1,834.3,China,0.37,0.37,0.501,1.0,0.185,0.37,1.35,0.01945
+254,848360,"Clutches and shaft couplings, incl. universal joints","Valves, bearings and gears",2,Parliament,0,0,1,303.7,China,0.283,0.283,0.137,0.235,0.039,0.067,0.49,0.00866
+255,848390,"Toothed wheels, chain sprockets and other transmission elements presented separately and parts of transmission shafts and cranks; bearing housings…","Valves, bearings and gears",3,Parliament,0,0,1,1943.1,China,0.392,0.392,0.304,0.555,0.119,0.218,0.65,0.01742
+256,848710,Ships' or boats' propellers and blades therefor,Unassigned,2,Council,0,1,0,89.6,Norway,0.15,0.139,0.225,0.428,0.034,0.064,0.61,0.00974
+257,848790,"Machinery parts of chapter 84, not intended for a specific purpose",Unassigned,5,Council,0,1,0,606.1,China,0.277,0.277,0.113,0.156,0.031,0.043,0.32,0.00876
+258,850110,"DC motors of an output <= 37,5 W","Motors, generators and transformers",4,Council,0,1,1,2281.7,China,0.362,0.362,0.532,0.736,0.193,0.267,0.59,0.0053
+259,850120,"Universal AC-DC motors of an output > 37,5 W","Motors, generators and transformers",1,Council,0,1,1,241.2,China,0.476,0.476,0.34,0.439,0.162,0.209,0.34,0.0093
+260,850131,"DC motors of an output > 37,5 W but <= 750 W and DC generators of an output <= 750 W","Motors, generators and transformers",1,Council,0,1,1,2157.2,China,0.499,0.499,0.379,0.5,0.189,0.249,0.39,0.00685
+261,850132,DC motors and DC generators of an output > 750 W but <= 75 kW,"Motors, generators and transformers",1,Commission,1,1,1,546.5,China,0.337,0.337,0.52,0.764,0.175,0.258,0.67,0.00626
+262,850133,DC motors and DC generators of an output > 75 kW but <= 375 kW,"Motors, generators and transformers",1,Council,0,1,1,97.8,South Korea,0.283,0.197,0.439,1.0,0.124,0.283,1.01,0.0072
+263,850134,DC motors and DC generators of an output > 375 kW,"Motors, generators and transformers",1,Council,0,1,1,13.5,China,0.323,0.323,0.335,1.0,0.108,0.323,1.05,0.01245
+264,850140,"AC motors, single phase, of an output of > 37,5 W but <= 750 W","Motors, generators and transformers",2,Council,0,1,1,568.5,China,0.51,0.51,0.297,0.366,0.151,0.187,0.25,0.01441
+265,850151,"AC motors, multi-phase, of an output > 37,5 W but <= 750 W","Motors, generators and transformers",1,Council,0,1,1,387.3,China,0.543,0.543,0.235,0.411,0.127,0.223,0.56,0.01087
+266,850152,"AC motors, multi-phase, of an output > 750 W but <= 7,5 kW","Motors, generators and transformers",3,Council,0,1,1,1105.7,China,0.506,0.506,0.165,0.241,0.083,0.122,0.36,0.01723
+267,850153,"AC traction motors, multi-phase, of an output > 75 kW","Motors, generators and transformers",3,Council,0,1,1,890.4,China,0.522,0.522,0.534,0.87,0.278,0.454,1.22,0.00741
+268,850153,"AC motors, multi-phase, of an output of > 75 kW but <= 375 kW","Motors, generators and transformers",1,Commission,1,1,1,191.9,China,0.375,0.375,0.1,0.13,0.037,0.049,0.26,0.0186
+269,850161,"AC generators alternators, of an output > 7,5 kVA but <= 75 kVA","Motors, generators and transformers",2,Council,0,1,1,153.3,United States,0.552,0.204,0.351,0.643,0.194,0.355,0.7,0.00701
+270,850162,"AC generators alternators, of an output > 75 kVA but <= 375 kVA","Motors, generators and transformers",1,Council,0,1,1,319.4,United States,0.786,0.026,0.65,1.0,0.511,0.786,1.25,0.00242
+271,850163,"AC generators alternators, of an output > 375 kVA but <= 750 kVA","Motors, generators and transformers",1,Council,0,1,1,41.6,United States,0.496,0.274,0.359,1.0,0.178,0.496,1.06,0.01159
+272,850164,"AC generators alternators, of an output > 750 kVA","Motors, generators and transformers",1,Council,0,1,1,351.7,China,0.393,0.393,0.209,0.415,0.082,0.163,0.63,0.01564
+273,850171,"Photovoltaic DC generators, of an output <= 50 W","Motors, generators and transformers",1,Parliament,0,0,1,5.2,China,0.838,0.838,0.163,0.173,0.136,0.145,0.07,0.00795
+274,850172,"Photovoltaic DC generators, of an output > 50 W","Motors, generators and transformers",1,Parliament,0,0,1,12.2,China,0.906,0.906,0.154,0.176,0.139,0.159,0.15,0.01661
+275,850180,Photovoltaic AC generators,"Motors, generators and transformers",1,Council,0,1,1,65.7,China,0.541,0.541,0.778,1.0,0.421,0.541,1.35,0.01019
+276,850231,"Generating sets, wind-powered","Motors, generators and transformers",1,Parliament,0,0,1,508.6,China,0.493,0.493,0.047,0.063,0.023,0.031,0.25,0.01597
+277,850300,"Parts suitable for use solely or principally with electric motors and generators, electric generating sets and rotary converters, n.e.s., of cast…","Motors, generators and transformers",2,Council,0,1,1,536.1,United States,0.38,0.359,0.109,0.113,0.041,0.043,0.04,0.02287
+278,850300,"Parts of electric motors, generators and generating sets","Motors, generators and transformers",1,Parliament,0,0,1,3342.9,China,0.434,0.434,,,,,,0.01602
+279,850410,"Inductors, whether or not connected with a capacitor","Motors, generators and transformers",1,Council,0,1,1,24.2,China,0.488,0.488,0.118,0.139,0.058,0.068,0.17,0.00477
+280,850410,Ballasts for discharge lamps or tubes,"Motors, generators and transformers",1,Parliament,0,0,1,37.3,China,0.519,0.519,0.164,0.227,0.085,0.118,0.33,0.00429
+281,850421,"Liquid dielectric transformers, having a power handling capacity <= 650 kVA","Motors, generators and transformers",1,Council,0,1,1,245.7,Turkey,0.393,0.088,0.172,0.196,0.067,0.077,0.15,0.02287
+282,850422,"Liquid dielectric transformers, having a power handling capacity > 1.600 kVA but <= 10.000 kVA","Motors, generators and transformers",2,Council,0,1,1,549.0,Turkey,0.545,0.252,0.29,0.347,0.158,0.189,0.23,0.01618
+283,850423,"Liquid dielectric transformers, having a power handling capacity > 10.000 kVA","Motors, generators and transformers",1,Parliament,0,0,1,339.2,China,0.427,0.427,0.073,0.124,0.031,0.053,0.44,0.01188
+284,850431,Measuring transformers having a power handling capacity <= 1 kVA,"Motors, generators and transformers",2,Council,0,1,1,128.1,China,0.429,0.429,0.184,0.423,0.079,0.181,0.69,0.00631
+285,850431,Transformers having a power handling capacity <= 1 kVA,"Motors, generators and transformers",1,Commission,1,1,1,543.4,China,0.679,0.679,0.385,0.452,0.262,0.307,0.24,0.00531
+286,850432,"Transformers, having a power handling capacity > 1 kVA but <= 16 kVA","Motors, generators and transformers",1,Council,0,1,1,87.3,China,0.484,0.484,0.193,0.248,0.094,0.12,0.27,0.01005
+287,850433,Transformers having a power handling capacity > 16 kVA but <= 500 kVA,"Motors, generators and transformers",1,Commission,1,1,1,104.8,China,0.232,0.232,0.125,0.162,0.029,0.038,0.26,0.01328
+288,850434,Transformers having a power handling capacity > 500 kVA,"Motors, generators and transformers",1,Council,0,1,1,161.7,China,0.44,0.44,0.105,0.139,0.046,0.061,0.27,0.05074
+289,850440,Rectifiers,"Motors, generators and transformers",1,Council,0,1,1,1646.8,China,0.584,0.584,0.472,0.657,0.276,0.384,0.53,0.0029
+290,850440,Static converters,"Motors, generators and transformers",10,Parliament,0,0,1,14728.1,China,0.657,0.657,0.428,0.699,0.281,0.459,0.66,0.0036
+291,850450,Inductors,"Motors, generators and transformers",1,Commission,1,1,1,1577.6,China,0.551,0.551,0.598,0.828,0.329,0.456,0.69,0.0038
+292,850490,Parts of transformers and inductors,"Motors, generators and transformers",3,Council,0,1,1,661.3,China,0.322,0.322,0.404,0.664,0.13,0.214,0.64,0.022
+293,850490,Parts of static converters,"Motors, generators and transformers",1,Parliament,0,0,1,1142.6,China,0.601,0.601,0.506,1.0,0.304,0.601,1.01,0.00476
+294,850811,"Vacuum cleaners, incl. dry cleaners and wet vacuum cleaners, with self-contained electric motor, power <= 1 500 W and having a dust bag or other…",Domestic electrical appliances,1,Parliament,0,0,1,3455.3,China,0.717,0.717,0.821,0.978,0.589,0.701,0.9,0.00703
+295,851539,"Machines for arc welding of metals, incl. plasma arc welding, neither fully nor partly automatic",Other industrial machinery,1,Commission,1,1,1,80.3,China,0.83,0.83,0.258,0.324,0.214,0.269,0.27,0.01087
+296,851610,Electric water heaters and immersion heaters,Domestic electrical appliances,2,Parliament,0,0,1,673.2,China,0.557,0.557,0.24,0.292,0.134,0.163,0.22,0.0186
+297,851629,"Liquid filled electric radiators, for space-heating and soil-heating",Domestic electrical appliances,2,Parliament,0,0,1,309.1,China,0.655,0.655,0.559,0.646,0.366,0.423,0.31,0.02279
+298,851660,"Electric ovens for building in, for domestic use",Domestic electrical appliances,4,Parliament,0,0,1,1271.6,China,0.494,0.494,0.338,0.425,0.167,0.21,0.52,0.02109
+299,854411,"Winding wire for electrical purposes, of copper, lacquered or enamelled",Insulated wire and cables,2,Commission,1,1,1,277.2,Serbia,0.253,0.193,0.079,0.092,0.02,0.023,0.15,0.01058
+300,854419,"Winding wire for electrical purposes, of material other than copper, insulated",Insulated wire and cables,1,Commission,1,1,1,97.2,China,0.41,0.41,0.079,0.092,0.033,0.038,0.15,0.01675
+301,854420,"Coaxial cable and other coaxial electric conductors, insulated",Insulated wire and cables,1,Parliament,0,0,1,536.7,China,0.368,0.368,0.238,0.327,0.088,0.12,0.36,0.00708
+302,854430,"Ignition wiring sets and other wiring sets for vehicles, aircraft or ships",Insulated wire and cables,1,Parliament,0,0,1,9737.0,Morocco,0.329,0.019,0.51,0.582,0.168,0.191,0.25,0.00539
+303,854442,"Electric conductors, for a voltage <= 1.000 V, insulated, fitted with connectors",Insulated wire and cables,2,Parliament,0,0,1,5135.6,China,0.532,0.532,0.556,0.847,0.296,0.451,0.77,0.00598
+304,854449,"Electric conductors for a voltage > 80 V but < 1.000 V, insulated, not fitted with connectors, n.e.s. (excl. winding wire, coaxial conductors,…",Insulated wire and cables,5,Commission,1,1,1,3136.6,Turkey,0.271,0.185,0.144,0.184,0.039,0.05,0.26,0.01663
+305,854460,"Electric conductors for a voltage > 1.000 V, insulated, not with copper conductors",Insulated wire and cables,2,Commission,1,1,1,898.8,Turkey,0.24,0.139,0.102,0.133,0.025,0.032,0.26,0.01839
+306,860711,Driving bogies and bissel-bogies for railway or tramway locomotives or rolling stock,Railway parts,1,Parliament,0,0,1,70.2,Switzerland,0.787,0.0,0.115,0.149,0.09,0.117,0.26,0.00811
+307,860712,Bogies and driving bissel-bogies for railway or tramway locomotives or rolling stock,Railway parts,1,Parliament,0,0,1,61.9,Switzerland,0.759,0.028,0.115,0.149,0.087,0.113,0.26,0.00819
+308,860719,"Axles, wheels and wheel parts, of railway or tramway locomotives or rolling stock",Railway parts,2,Parliament,0,0,1,332.2,China,0.278,0.278,0.115,0.149,0.032,0.041,0.26,0.04368
+309,860721,"Air brakes and parts thereof, of railway or tramway locomotives or rolling stock",Railway parts,2,Parliament,0,0,1,65.1,Turkey,0.315,0.071,0.115,0.149,0.036,0.047,0.26,0.01876
+310,860729,"Brakes, and parts thereof, for railway or tramway locomotives or rolling stock",Railway parts,1,Parliament,0,0,1,10.7,Britain,0.236,0.202,0.115,0.149,0.027,0.035,0.26,0.01815
+311,860730,"Hooks and other coupling devices, buffers, and parts thereof, for railway or tramway locomotives or rolling stock",Railway parts,1,Parliament,0,0,1,51.5,China,0.226,0.226,0.115,0.149,0.026,0.034,0.26,0.01253
+312,860791,Parts of railway or tramway locomotives,Railway parts,2,Parliament,0,0,1,113.9,China,0.667,0.667,0.115,0.149,0.076,0.099,0.26,0.00745
+313,860799,"Parts of rolling stock of heading 8603, 8604, 8605 or 8606",Railway parts,2,Parliament,0,0,1,501.7,China,0.389,0.389,0.115,0.149,0.045,0.058,0.26,0.01052
+314,870410,"Dumpers for off-highway use, with compression-ignition internal combustion piston engine diesel or semi-diesel engine or with spark-ignition…","Trucks, vehicle parts and trailers",2,Parliament,0,0,1,524.6,Britain,0.369,0.04,0.244,0.361,0.09,0.133,0.43,0.01747
+315,870421,"Motor vehicles for the transport of goods, with only compression-ignition internal combustion piston engine diesel or semi-diesel, of a gross…","Trucks, vehicle parts and trailers",3,Commission,1,1,1,5844.7,Turkey,0.487,0.013,0.197,0.263,0.096,0.128,0.32,0.01205
+316,870421,"Motor vehicles for the transport of goods, with only compression-ignition internal combustion piston engine diesel or semi-diesel, of a gross…","Trucks, vehicle parts and trailers",2,Parliament,0,0,1,88.9,Britain,0.538,0.018,,,,,,0.03458
+317,870422,"Motor vehicles for the transport of goods, with only compression-ignition internal combustion piston engine diesel or semi-diesel, of a gross…","Trucks, vehicle parts and trailers",2,Commission,1,1,1,373.0,Britain,0.666,0.001,0.053,0.072,0.035,0.048,0.28,0.01034
+318,870422,"Motor vehicles for the transport of goods, with only compression-ignition internal combustion piston engine diesel or semi-diesel, of a gross…","Trucks, vehicle parts and trailers",1,Parliament,0,0,1,80.3,Norway,0.375,0.0,,,,,,0.04774
+319,870423,"Motor vehicles with only compression-ignition internal combustion piston engine diesel or semi-diesel, of a gross vehicle weight > 20 t, for the…","Trucks, vehicle parts and trailers",1,Commission,1,1,1,0.4,Norway,0.998,0.0,0.013,0.024,0.013,0.024,0.46,0.01148
+320,870423,"Motor vehicles for the transport of goods, with only compression-ignition internal combustion piston engine diesel or semi-diesel, of a gross…","Trucks, vehicle parts and trailers",2,Parliament,0,0,1,260.5,Norway,0.358,0.0,0.013,0.024,0.005,0.008,0.46,0.02452
+321,870431,"Motor vehicles for the transport of goods, with only spark-ignition internal combustion piston engine, of a gross vehicle weight <= 5 t, of a…","Trucks, vehicle parts and trailers",3,Commission,1,1,1,278.3,Japan,0.419,0.059,0.199,0.303,0.084,0.127,0.43,0.01114
+322,870431,"Motor vehicles for the transport of goods, with only spark-ignition internal combustion piston engine, of a gross vehicle weight <= 5 t, of a…","Trucks, vehicle parts and trailers",2,Parliament,0,0,1,7.3,United States,0.46,0.017,,,,,,0.0385
+323,870432,"Motor vehicles, with only spark-ignition internal combustion piston engine, of a gross vehicle weight > 5 t, for the transport of highly…","Trucks, vehicle parts and trailers",1,Commission,1,1,1,0.0,Britain,0.883,0.018,0.199,0.303,0.176,0.267,0.43,0.07587
+324,870432,"Motor vehicles for the transport of goods, with only spark-ignition internal combustion piston engine, of a gross vehicle weight > 5 t, used…","Trucks, vehicle parts and trailers",2,Parliament,0,0,1,4.8,Britain,0.523,0.0,0.199,0.303,0.104,0.158,0.43,0.05155
+325,870441,"Motor vehicles for the transport of goods, with both compression-ignition internal combustion piston engine diesel or semi-diesel and electric…","Trucks, vehicle parts and trailers",3,Commission,1,1,1,74.1,Turkey,0.993,0.003,0.014,0.014,0.014,0.014,0.01,0.01231
+326,870441,"Motor vehicles for the transport of goods, with both compression-ignition internal combustion piston engine diesel or semi-diesel and electric…","Trucks, vehicle parts and trailers",2,Parliament,0,0,1,1.4,Britain,0.413,0.0,,,,,,0.02441
+327,870442,"Motor vehicles for the transport of goods, with both compression-ignition internal combustion piston engine diesel or semi-diesel and electric…","Trucks, vehicle parts and trailers",2,Commission,1,1,1,0.8,Britain,0.224,0.031,0.014,0.014,0.003,0.003,0.01,0.00785
+328,870442,"Motor vehicles for the transport of goods, with both compression-ignition internal combustion piston engine diesel or semi-diesel and electric…","Trucks, vehicle parts and trailers",1,Parliament,0,0,1,1.8,Britain,0.655,0.0,,,,,,0.03714
+329,870443,"Motor vehicles for the transport of goods, with both compression-ignition internal combustion piston engine diesel or semi-diesel and electric…","Trucks, vehicle parts and trailers",2,Commission,1,1,1,0.4,Switzerland,0.274,0.0,0.014,0.014,0.004,0.004,0.01,0.00835
+330,870443,"Motor vehicles for the transport of goods, with both compression-ignition internal combustion piston engine diesel or semi-diesel and electric…","Trucks, vehicle parts and trailers",1,Parliament,0,0,1,6.3,Norway,0.881,0.001,,,,,,0.0403
+331,870451,"Motor vehicles for the transport of goods, with both spark-ignition internal combustion piston engine and electric motor as motors for propulsion,…","Trucks, vehicle parts and trailers",5,Parliament,0,0,1,20.0,Turkey,0.961,0.002,0.418,0.462,0.402,0.444,0.16,0.00926
+332,870452,"Motor vehicles for the transport of goods, with both spark-ignition internal combustion piston engine and electric motor as motors for propulsion,…","Trucks, vehicle parts and trailers",3,Parliament,0,0,1,0.2,Britain,0.841,0.0,0.418,0.462,0.351,0.388,0.16,0.07767
+333,870460,"Motor vehicles for the transport of goods, with only electric motor as motor for propulsion (excl. dumpers for off-highway use of subheading…","Trucks, vehicle parts and trailers",1,Commission,1,1,1,629.2,Turkey,0.508,0.248,0.234,0.319,0.119,0.162,0.34,0.00846
+334,870490,"Motor vehicles for the transport of goods, with engines other than internal combustion piston engine or electric motor","Trucks, vehicle parts and trailers",1,Commission,1,1,1,114.3,China,0.416,0.416,0.199,0.303,0.083,0.126,0.43,0.01965
+335,870600,"Chassis with compression ignition internal combustion engines, of cylinder capacity <= 2.500 cm³ or with spark-ignition internal combustion…","Trucks, vehicle parts and trailers",4,Commission,1,1,1,42.4,China,0.285,0.285,0.022,0.033,0.006,0.009,0.34,0.01
+336,870710,Bodies for motor cars and other motor vehicles principally designed for the transport of persons,"Trucks, vehicle parts and trailers",2,Commission,1,1,1,31.9,Britain,0.282,0.2,0.012,0.012,0.003,0.003,0.05,0.01134
+337,870790,"Bodies for tractors, motor vehicles for the transport of ten or more persons, motor vehicles for the transport of goods and special purpose motor…","Trucks, vehicle parts and trailers",2,Parliament,0,0,1,100.4,Japan,0.255,0.151,0.009,0.01,0.002,0.002,0.08,0.02064
+338,870810,"Bumpers and parts thereof for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally…","Trucks, vehicle parts and trailers",2,Council,0,1,1,711.4,China,0.18,0.18,0.12,0.16,0.021,0.029,0.29,0.01274
+339,870822,"Front windscreens windshields, rear windows and other windows for motor vehicles of headings 8701 to 8705 (excl. for the industrial assembly of:…","Trucks, vehicle parts and trailers",2,Council,0,1,1,394.7,China,0.5,0.5,0.08,0.096,0.04,0.048,0.18,0.02508
+340,870829,"Parts and accessories for the industrial assembly of bodies of: tractors, motor vehicles for the transport of >= 10 persons, motor cars and…","Trucks, vehicle parts and trailers",2,Council,0,1,1,4141.1,China,0.217,0.217,0.08,0.096,0.017,0.021,0.18,0.01602
+341,870830,"Parts for disc brakes, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally…","Trucks, vehicle parts and trailers",3,Council,0,1,1,2715.9,China,0.506,0.506,0.152,0.2,0.077,0.101,0.28,0.03636
+342,870840,"Gear boxes for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally designed for the…","Trucks, vehicle parts and trailers",4,Commission,1,1,1,5255.7,Japan,0.369,0.146,0.222,0.45,0.082,0.166,0.65,0.00889
+343,870850,"Parts for drive-axles with differential, whether or not provided with other transmission components, for tractors, motor vehicles for the…","Trucks, vehicle parts and trailers",5,Council,0,1,1,2278.5,South Korea,0.242,0.19,0.14,0.199,0.034,0.048,0.34,0.02371
+344,870870,"Aluminium road wheels, aluminium parts and accessories thereof, for tractors, motor vehicles for the transport of ten or more persons, motor cars…","Trucks, vehicle parts and trailers",4,Commission,1,1,1,2211.3,Turkey,0.433,0.111,0.303,0.407,0.131,0.176,0.36,0.02584
+345,870880,"Suspension systems and parts thereof, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles…","Trucks, vehicle parts and trailers",5,Commission,1,1,1,2007.5,China,0.349,0.349,0.232,0.377,0.081,0.131,0.5,0.02108
+346,870891,"Radiators for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally designed for the…","Trucks, vehicle parts and trailers",4,Commission,1,1,1,684.5,China,0.447,0.447,0.214,0.313,0.096,0.14,0.4,0.01072
+347,870892,"Parts for silencers mufflers and exhaust pipes, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor…","Trucks, vehicle parts and trailers",4,Council,0,1,1,826.4,China,0.302,0.302,0.058,0.063,0.018,0.019,0.09,0.01031
+348,870893,"Clutches and parts thereof, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally…","Trucks, vehicle parts and trailers",2,Council,0,1,1,851.9,China,0.215,0.215,0.133,0.192,0.029,0.041,0.35,0.01556
+349,870894,"Steering wheels, columns and boxes, for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles…","Trucks, vehicle parts and trailers",4,Council,0,1,1,1773.6,China,0.23,0.23,0.165,0.234,0.038,0.054,0.36,0.00995
+350,870899,"Parts and accessories for tractors, motor vehicles for the transport of ten or more persons, motor cars and other motor vehicles principally…","Trucks, vehicle parts and trailers",3,Council,0,1,1,4438.4,China,0.215,0.215,0.061,0.073,0.013,0.016,0.17,0.01633
+351,871610,"Trailers and semi-trailers of the caravan type, for housing or camping, of a weight > 1600 kg","Trucks, vehicle parts and trailers",2,Council,0,1,1,129.3,Britain,0.762,0.025,0.069,0.076,0.052,0.058,0.11,0.02252
+352,871620,Self-loading or self-unloading trailers and semi-trailers for agricultural purposes,"Trucks, vehicle parts and trailers",1,Parliament,0,0,1,27.5,Britain,0.335,0.105,0.017,0.018,0.006,0.006,0.07,0.03488
+353,871631,"Tanker trailers and tanker semi-trailers, not designed for running on rails","Trucks, vehicle parts and trailers",1,Council,0,1,1,55.5,Turkey,0.709,0.001,0.058,0.068,0.041,0.048,0.16,0.01726
+354,871639,"Semi-trailers for the transport of goods, new (excl. self-loading or self-unloading semi-trailers for agricultural purposes, tanker semi-trailers,…","Trucks, vehicle parts and trailers",3,Council,0,1,1,385.1,Turkey,0.717,0.039,0.058,0.068,0.042,0.049,0.16,0.03789
+355,871639,"Trailers and semi-trailers for the transport of goods, used (excl. self-loading or self-unloading trailers and semi-trailers for agricultural…","Trucks, vehicle parts and trailers",1,Parliament,0,0,1,50.2,Britain,0.388,0.012,,,,,,0.05891
+356,871640,"Trailers and semi-trailers, not designed for running on rails","Trucks, vehicle parts and trailers",1,Council,0,1,1,208.7,China,0.28,0.28,0.058,0.068,0.016,0.019,0.16,0.02197
+357,871680,Vehicles pushed or drawn by hand and other vehicles not mechanically propelled,"Trucks, vehicle parts and trailers",1,Commission,1,1,1,451.1,China,0.74,0.74,0.38,0.5,0.281,0.37,0.39,0.03358
+358,871690,"Axles of trailers, semi-trailers and other vehicles not mechanically propelled","Trucks, vehicle parts and trailers",3,Council,0,1,1,145.3,China,0.41,0.41,0.055,0.069,0.022,0.028,0.21,0.0426
+359,871690,"Parts of trailers, semi-trailers and other vehicles not mechanically propelled","Trucks, vehicle parts and trailers",1,Commission,1,1,1,697.6,China,0.533,0.533,0.227,0.301,0.121,0.161,0.32,0.04442
+360,901812,Ultrasonic scanning apparatus,Medical and measuring instruments,1,Parliament,0,0,1,990.4,United States,0.25,0.243,0.552,1.0,0.138,0.25,1.48,0.00054
+361,901813,Magnetic resonance imaging apparatus,Medical and measuring instruments,1,Parliament,0,0,1,1328.9,Britain,0.35,0.206,0.552,1.0,0.193,0.35,1.48,0.00188
+362,901814,Scintigraphic apparatus,Medical and measuring instruments,1,Parliament,0,0,1,174.7,United States,0.858,0.014,0.552,1.0,0.473,0.858,1.48,0.00083
+363,901819,"Electro-diagnostic apparatus, incl. apparatus for functional exploratory examination or for checking physiological parameters (excl.…",Medical and measuring instruments,2,Parliament,0,0,1,3008.7,United States,0.727,0.078,0.552,1.0,0.401,0.727,1.48,0.00048
+364,901831,"Syringes of plastics, with or without needles, used in medical, surgical, dental or veterinary sciences",Medical and measuring instruments,2,Parliament,0,0,1,1735.7,United States,0.277,0.091,0.496,0.763,0.137,0.211,0.69,0.00413
+365,901832,"Tubular metal needles, used in medical, surgical, dental or veterinary sciences",Medical and measuring instruments,1,Commission,1,0,1,353.1,Japan,0.223,0.169,0.547,1.0,0.122,0.223,1.66,0.00382
+366,901839,"Needles, catheters, cannulae and the like, used in medical, surgical, dental or veterinary sciences",Medical and measuring instruments,1,Parliament,0,0,1,5671.2,United States,0.373,0.058,0.503,1.0,0.187,0.373,1.54,0.00154
+367,901849,Instruments and appliances used in dental sciences,Medical and measuring instruments,2,Parliament,0,0,1,914.3,Switzerland,0.388,0.112,0.401,1.0,0.156,0.388,1.21,0.00073
+368,901890,"Instruments and appliances used in medical, surgical or veterinary sciences",Medical and measuring instruments,2,Commission,1,0,1,7597.4,United States,0.432,0.077,0.436,0.985,0.189,0.426,0.99,0.00114
+369,901890,Transfusion and infusion apparatus used in medical sciences,Medical and measuring instruments,2,Parliament,0,0,1,915.2,Turkey,0.136,0.131,0.272,0.687,0.037,0.093,0.79,0.00758
+370,902710,Non-electronic gas or smoke analysis apparatus,Medical and measuring instruments,1,Commission,1,1,1,453.5,Japan,0.41,0.078,0.61,1.0,0.25,0.41,1.41,0.00079
+371,902710,Electronic gas or smoke analysis apparatus,Medical and measuring instruments,1,Parliament,0,0,1,486.1,United States,0.302,0.157,0.238,0.877,0.072,0.265,0.96,0.00054
+372,902720,Chromatographs and electrophoresis instruments,Medical and measuring instruments,1,Parliament,0,0,1,275.4,United States,0.38,0.202,0.257,0.597,0.097,0.227,0.77,0.00042
+373,940120,Seats for motor vehicles,"Furniture, seats and mattresses",1,Council,0,1,1,209.9,Turkey,0.362,0.214,0.013,0.013,0.005,0.005,0.02,0.01239
+374,940139,Swivel seats with variable height adjustments,"Furniture, seats and mattresses",1,Parliament,0,0,1,829.0,China,0.812,0.812,0.454,0.545,0.369,0.442,0.31,0.02895
+375,940171,"Upholstered seats, with metal frames","Furniture, seats and mattresses",1,Parliament,0,0,1,1689.3,China,0.867,0.867,0.488,0.65,0.423,0.564,0.49,0.02597
+376,940179,"Seats, with metal frames","Furniture, seats and mattresses",1,Commission,1,1,1,1698.5,China,0.815,0.815,0.69,0.815,0.563,0.664,0.49,0.0264
+377,940191,"Parts of seats, of wood","Furniture, seats and mattresses",1,Parliament,0,0,1,88.1,Bosnia,0.168,0.146,0.326,0.409,0.055,0.069,0.3,0.03143
+378,940310,"Metal furniture for offices, of > 80 cm in height","Furniture, seats and mattresses",5,Commission,1,1,1,429.5,China,0.508,0.508,0.162,0.197,0.082,0.1,0.21,0.03761
+379,940320,Metal furniture,"Furniture, seats and mattresses",2,Commission,1,1,1,3576.1,China,0.74,0.74,0.397,0.496,0.294,0.367,0.33,0.03737
+380,940399,"Parts of furniture, of metal","Furniture, seats and mattresses",1,Council,0,1,1,884.8,China,0.584,0.584,0.323,0.472,0.188,0.276,0.47,0.03328
+381,940429,Mattresses with spring interiors,"Furniture, seats and mattresses",1,Parliament,0,0,1,191.9,Turkey,0.374,0.303,0.077,0.083,0.029,0.031,0.08,0.03303
+382,940490,"Articles of bedding and similar furnishing, fitted with springs or stuffed or internally filled with any material or of cellular rubber or…","Furniture, seats and mattresses",1,Parliament,0,0,1,1055.0,China,0.651,0.651,0.461,0.57,0.3,0.371,0.35,0.02113
+383,940610,"Prefabricated buildings of wood, whether or not complete or already assembled",Prefabricated buildings,1,Parliament,0,0,1,143.0,Britain,0.353,0.075,0.021,0.023,0.007,0.008,0.07,0.05269
+384,940620,"Modular building units, of steel",Prefabricated buildings,1,Council,0,1,1,103.4,Bosnia,0.57,0.082,0.016,0.017,0.009,0.01,0.05,0.04493
+385,940690,"Buildings, prefabricated, whether or not complete or already assembled, made entirely or mainly of iron or steel",Prefabricated buildings,3,Council,0,1,1,372.1,China,0.358,0.358,0.017,0.018,0.006,0.007,0.05,0.04569
+386,940690,"Prefabricated buildings, whether or not complete or already assembled",Prefabricated buildings,1,Commission,1,1,1,278.7,China,0.399,0.399,0.079,0.09,0.032,0.036,0.13,0.04235
