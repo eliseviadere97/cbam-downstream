@@ -17,7 +17,7 @@ METAL_CONTENT_73_76 = 1.0      # articles of iron or steel (ch. 73) and of alumi
 METAL_CONTENT_OTHER = 0.79     # other goods: average steel/aluminium content of the Commission's list (EPRS)
 
 # Cut-offs used in the chart and the Insight (fixed lines, not medians).
-LEAKAGE_CUT = 0.015            # carbon-leakage worry: CBAM charge at or above 1.5% of price
+LEAKAGE_CUT = 0.01             # carbon-leakage worry: CBAM charge at or above 1% of price
 IMPORT_SHARE_CUT = 1 / 3       # supply-security worry: imports above a third of the EU market ...
 SUPPLIER_CUT = 0.5             # ... and one country above half of those imports
 

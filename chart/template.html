@@ -123,7 +123,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
   <div class="notes">
     <div>Circle size shows imports from outside the EU, average 2022–24. Button totals cover every line on each list. Colour shows which position first put the product on the list: the Council and Parliament build on the Commission's list.</div>
-    <div>How to read it: a product is a supply-security worry if imports supply more than a third of the EU market (right of the dashed line) <em>and</em> one country supplies more than half of those imports (filled circle). It is a carbon-leakage worry if the CBAM charge is above 1.5% of the price (above the dashed line).</div>
+    <div>How to read it: a product is a supply-security worry if imports supply more than a third of the EU market (right of the dashed line) <em>and</em> one country supplies more than half of those imports (filled circle). It is a carbon-leakage worry if the CBAM charge is above 1% of the price (above the dashed line).</div>
     <div>Official counts and ours: the Commission proposed about 180 downstream products; we find 178 eight-digit tariff lines. The Council kept them, dropped three and added 200, about 370 lines in all, so the often-quoted "about 200" describes its additions, not its whole list. Parliament's 457 matches the Commission's lines plus the 276 it lists one by one (we find about 450); its broad headings reach 623 lines in all, which is what this map uses. The buttons count the lines each position adds, and colour credits each line to the first position that lists it.</div>
     <div>CBAM charge: carbon in the steel or aluminium content at €82 a tonne of CO₂, once fully phased in. EU market: EU production plus imports from outside the EU.</div>
     <div>Sources: Eurostat Comext and Prodcom; European Commission COM(2025) 989; Council of the EU ST 10423/26; European Parliament P10_TA(2026)0276; CER analysis.</div>
@@ -143,7 +143,7 @@ const W = 960, H = 600, M = { l: 64, r: 16, t: 16, b: 58 };
 const AX = { x0: 0, x1: 0.85, cut: 1 / 3, ticks: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8],
   label: "Share of the EU market supplied by imports from outside the EU →" };
 const CONC = 0.5;
-const Y0 = 4e-5, Y1 = 0.2, YCUT = 0.015;
+const Y0 = 4e-5, Y1 = 0.2, YCUT = 0.01;
 const sx = v => M.l + (v - AX.x0) / (AX.x1 - AX.x0) * (W - M.l - M.r);
 const sy = v => H - M.b - (Math.log10(v) - Math.log10(Y0)) / (Math.log10(Y1) - Math.log10(Y0)) * (H - M.t - M.b);
 const pct = v => (v >= 0.01 ? (v * 100).toFixed(1) : v >= 0.001 ? (v * 100).toFixed(2) : (v * 100).toFixed(3)) + "%";
