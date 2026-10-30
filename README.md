@@ -139,11 +139,13 @@ imports + EU production).
 **Chart rows (step 3).** A six-digit HS code together with the position that
 first lists its lines. The CBAM charge is metal content × emission factor ×
 €82.32 ÷ import value per tonne, at full phase-in (steel 1.9 tCO₂/t, aluminium
-1.7; metal content 1.0 for chapters 73 and 76, 0.79 otherwise).
+1.7; metal content 1.0 for chapters 73 and 76, 0.79 otherwise). €82.32 is the
+[price the Commission set for CBAM certificates](https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en)
+for the third quarter of 2026.
 
-**Chart cut-offs.** Carbon-leakage worry: charge of 1% or more. Supply-security
-worry: imports above a third of the EU market *and* one country above half of
-those imports. They are fixed lines, not medians.
+**Chart cut-offs.** Leakage risk: charge of 1% or more. Dependence risk: imports
+above a third of the EU market *and* one country above half of those imports.
+They are fixed lines, not medians.
 
 ## The final dataset
 

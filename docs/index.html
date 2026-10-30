@@ -107,7 +107,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
     <label class="small"><input type="checkbox" id="all"> Show all products, including small ones</label></div>
   <div class="chartrow">
   <div class="chartbox" id="box">
-    <svg id="chart" viewBox="0 0 960 600" role="img" aria-label="Scatter chart of downstream products: share bought from the largest supplier against the CBAM charge as a share of price"></svg>
+    <svg id="chart" viewBox="0 0 960 600" role="img" aria-label="Scatter chart of downstream products: imports' share of the EU market against the CBAM charge as a share of the price"></svg>
     <div class="tip" id="tip" hidden></div>
   </div>
   <aside class="side" aria-live="polite" aria-label="Count of products on the chart">
@@ -123,10 +123,10 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 
   <div class="notes">
     <div>Circle size shows imports from outside the EU, average 2022–24. Button totals cover every line on each list. Colour shows which position first put the product on the list: the Council and Parliament build on the Commission's list.</div>
-    <div>How to read it: a product is a supply-security worry if imports supply more than a third of the EU market (right of the dashed line) <em>and</em> one country supplies more than half of those imports (filled circle). It is a carbon-leakage worry if the CBAM charge is above 1% of the price (above the dashed line).</div>
+    <div>How to read it: a product is a dependence risk if imports supply more than a third of the EU market (right of the dashed line) <em>and</em> one country supplies more than half of those imports (filled circle). It is a leakage risk if the CBAM charge is at least 1% of the price (on or above the dashed line). The remaining products, including hollow circles at the bottom right, have a low estimated carbon cost and no identified concentrated import dependence.</div>
     <div>Official counts and ours: the Commission proposed about 180 downstream products; we find 178 eight-digit tariff lines. The Council kept them, dropped three and added 200, about 370 lines in all, so the often-quoted "about 200" describes its additions, not its whole list. Parliament's 457 matches the Commission's lines plus the 276 it lists one by one (we find about 450); its broad headings reach 623 lines in all, which is what this map uses. The buttons count the lines each position adds, and colour credits each line to the first position that lists it.</div>
     <div>CBAM charge: carbon in the steel or aluminium content at €82.32 a tonne of CO₂, the Commission's CBAM certificate price for the third quarter of 2026, once fully phased in. EU market: EU production plus imports from outside the EU.</div>
-    <div>Sources: Eurostat Comext and Prodcom; European Commission COM(2025) 989; Council of the EU ST 10423/26; European Parliament P10_TA(2026)0276; CER analysis.</div>
+    <div>Sources: Eurostat Comext and Prodcom; European Commission COM(2025) 989 and CBAM certificate prices; Council of the EU ST 10423/26; European Parliament P10_TA(2026)0276; CER analysis.</div>
   </div>
 
   <details>
@@ -160,8 +160,8 @@ const strategic = d => d.su > AX.cut && d.s > CONC;
 function quadrant(d) {
   const hi = d.ch >= YCUT, imp = d.su > AX.cut, st = strategic(d);
   if (hi && st) return "Carbon-heavy, and the EU leans on one foreign supplier";
-  if (hi) return "Carbon-heavy, no single foreign supplier to worry about: the classic leakage case";
-  if (st) return "Little carbon, but the EU leans on one foreign supplier: a security question";
+  if (hi) return "Carbon-heavy, no identified concentrated import dependence: the classic leakage case";
+  if (st) return "Low estimated carbon cost, but the EU leans on one foreign supplier: a dependence question";
   if (imp) return "Low estimated carbon cost, no identified concentrated import dependence: imports matter, but they come from several countries";
   return "Low estimated carbon cost, no identified concentrated import dependence";
 }
@@ -186,10 +186,10 @@ function axes() {
   el("line", { class: "cut", x1: M.l, x2: W - M.r, y1: sy(YCUT), y2: sy(YCUT) }, g);
   const q = (x, y, a, t1, t2) => { const t = el("text", { class: "quad", x, y, "text-anchor": a }, g);
     const s1 = el("tspan", { x, dy: 0 }, t); s1.textContent = t1; const s2 = el("tspan", { class: "sub", x, dy: 15 }, t); s2.textContent = t2; };
-  q(M.l + 10, M.t + 16, "start", "CARBON LEAKAGE", "carbon-heavy, mostly made in the EU");
-  q(W - M.r - 10, M.t + 16, "end", "BOTH", "filled circles here: carbon-heavy and one supplier dominates");
+  q(M.l + 10, M.t + 16, "start", "LEAKAGE RISK ONLY", "carbon-heavy, no identified concentrated dependence");
+  q(W - M.r - 10, M.t + 16, "end", "BOTH RISKS", "filled circles here: carbon-heavy and one supplier dominates");
   q(M.l + 10, H - M.b - 26, "start", "LOW ESTIMATED CARBON COST", "no identified concentrated import dependence");
-  q(W - M.r - 10, H - M.b - 26, "end", "SUPPLY SECURITY", "filled circles here: imports dominate, one supplier dominates");
+  q(W - M.r - 10, H - M.b - 26, "end", "DEPENDENCE RISK ONLY", "filled circles here: imports over a third, one supplier over half");
 }
 
 let dots = [], ring;
@@ -221,7 +221,7 @@ function visible(d) {
 }
 function filter() { dots.forEach(c => c.classList.toggle("off", !visible(c.__d))); side(); }
 
-const QUAD = [["leak", "Carbon leakage"], ["both", "Both"], ["sec", "Supply security"], ["none", "Low estimated carbon cost, no identified concentrated import dependence"]];
+const QUAD = [["leak", "Leakage risk only"], ["both", "Both risks"], ["sec", "Dependence risk only"], ["none", "Low estimated carbon cost, no identified concentrated import dependence"]];
 function worry(d) {
   const hi = d.ch >= YCUT, st = strategic(d);
   return hi && st ? "both" : hi ? "leak" : st ? "sec" : "none";

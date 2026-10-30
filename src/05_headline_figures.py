@@ -23,13 +23,13 @@ df["co2_mt"] = df["cbam_cost_eur_m"] / CARBON_PRICE                         # EU
 df["china_imports_eur_m"] = df["imports_eur_m"] * df["china_share"]
 df["placed"] = df["import_share_eu_market"].notna()
 df["leakage"] = df["cbam_charge"] >= LEAKAGE_CUT
-df["security"] = (df["placed"]
+df["dependence"] = (df["placed"]
                   & (df["import_share_eu_market"] > IMPORT_SHARE_CUT)
                   & (df["main_supplier_share"] > SUPPLIER_CUT))
-df["quadrant"] = "Neither"
-df.loc[df["leakage"], "quadrant"] = "Carbon leakage"
-df.loc[df["security"], "quadrant"] = "Supply security"
-df.loc[df["leakage"] & df["security"], "quadrant"] = "Both"
+df["quadrant"] = "Low estimated carbon cost"
+df.loc[df["leakage"], "quadrant"] = "Leakage risk only"
+df.loc[df["dependence"], "quadrant"] = "Dependence risk only"
+df.loc[df["leakage"] & df["dependence"], "quadrant"] = "Both risks"
 df.loc[~df["placed"], "quadrant"] = "Not placed"
 
 
@@ -61,18 +61,18 @@ lists = pd.DataFrame({
 adds = df.groupby("first_listed_by").apply(summarise, include_groups=False)
 adds.index = [f"First listed by {p}" for p in adds.index]
 
-# Table 3: imports by worry quadrant, EUR bn.
+# Table 3: imports by risk category, EUR bn.
 quadrants = (df.pivot_table(index="first_listed_by", columns="quadrant", values="imports_eur_m",
                             aggfunc="sum", fill_value=0) / 1000)
-quadrants = quadrants[["Carbon leakage", "Both", "Supply security", "Neither", "Not placed"]]
+quadrants = quadrants[["Leakage risk only", "Both risks", "Dependence risk only", "Low estimated carbon cost", "Not placed"]]
 
 pd.set_option("display.width", 200)
 pd.set_option("display.max_columns", 10)
 print("Whole lists\n", lists.round(3).T, "\n")
 print("What each position adds\n", adds.round(3).T, "\n")
 print("Imports by quadrant, EUR bn\n", quadrants.round(1), "\n")
-both = quadrants["Both"].sum()
-print(f"Overlap ('Both'): EUR {both:.1f}bn, {both / quadrants.to_numpy().sum():.0%} of all imports")
+both = quadrants["Both risks"].sum()
+print(f"Overlap ('Both risks'): EUR {both:.1f}bn, {both / quadrants.to_numpy().sum():.0%} of all imports")
 print(f"Parliament list vs Commission list: {lists.loc['Parliament list', 'imports_eur_bn'] / lists.loc['Commission list', 'imports_eur_bn']:.1f}x imports, "
       f"{lists.loc['Parliament list', 'co2_mt'] / lists.loc['Commission list', 'co2_mt']:.1f}x CO2")
 
