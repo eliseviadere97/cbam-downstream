@@ -116,7 +116,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
     <div class="side-sub" id="c-sub"></div>
     <div class="side-h">By position</div>
     <dl class="cnt" id="c-pos"></dl>
-    <div class="side-h">By worry</div>
+    <div class="side-h">By category</div>
     <dl class="cnt" id="c-quad"></dl>
   </aside>
   </div>
@@ -162,8 +162,8 @@ function quadrant(d) {
   if (hi && st) return "Carbon-heavy, and the EU leans on one foreign supplier";
   if (hi) return "Carbon-heavy, no single foreign supplier to worry about: the classic leakage case";
   if (st) return "Little carbon, but the EU leans on one foreign supplier: a security question";
-  if (imp) return "Imports matter, but they come from several countries";
-  return "Little carbon, and mostly made in the EU";
+  if (imp) return "Low estimated carbon cost, no identified concentrated import dependence: imports matter, but they come from several countries";
+  return "Low estimated carbon cost, no identified concentrated import dependence";
 }
 
 function axes() {
@@ -188,7 +188,7 @@ function axes() {
     const s1 = el("tspan", { x, dy: 0 }, t); s1.textContent = t1; const s2 = el("tspan", { class: "sub", x, dy: 15 }, t); s2.textContent = t2; };
   q(M.l + 10, M.t + 16, "start", "CARBON LEAKAGE", "carbon-heavy, mostly made in the EU");
   q(W - M.r - 10, M.t + 16, "end", "BOTH", "filled circles here: carbon-heavy and one supplier dominates");
-  q(M.l + 10, H - M.b - 26, "start", "NEITHER", "little carbon, mostly made in the EU");
+  q(M.l + 10, H - M.b - 26, "start", "LOW ESTIMATED CARBON COST", "no identified concentrated import dependence");
   q(W - M.r - 10, H - M.b - 26, "end", "SUPPLY SECURITY", "filled circles here: imports dominate, one supplier dominates");
 }
 
@@ -221,7 +221,7 @@ function visible(d) {
 }
 function filter() { dots.forEach(c => c.classList.toggle("off", !visible(c.__d))); side(); }
 
-const QUAD = [["leak", "Carbon leakage"], ["both", "Both"], ["sec", "Supply security"], ["none", "Neither"]];
+const QUAD = [["leak", "Carbon leakage"], ["both", "Both"], ["sec", "Supply security"], ["none", "Low estimated carbon cost, no identified concentrated import dependence"]];
 function worry(d) {
   const hi = d.ch >= YCUT, st = strategic(d);
   return hi && st ? "both" : hi ? "leak" : st ? "sec" : "none";

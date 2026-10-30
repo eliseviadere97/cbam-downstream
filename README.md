@@ -95,7 +95,8 @@ it with `source ~/.venvs/cbam/bin/activate`, and open the chart with
 `open docs/index.html` (Mac) or `xdg-open docs/index.html` (Linux). The other
 commands are the same.
 
-To publish the chart with GitHub Pages, serve the `docs/` folder.
+The chart is published with GitHub Pages from the `docs/` folder:
+https://eliseviadere97.github.io/cbam-downstream/
 
 ## Check that it reproduces the published chart
 
