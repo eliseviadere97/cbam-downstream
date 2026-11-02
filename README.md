@@ -1,6 +1,6 @@
 # CBAM downstream extension: data and interactive chart
 
-Code and data behind the CER Insight *A carbon border's identity crisis* and its
+Code and data behind the CER Insight *Europe's carbon border should stop where the carbon does* and its
 interactive chart, *Extending CBAM downstream: carbon-leakage risk and import
 dependence, product by product*. Everything runs from the raw downloads to the
 published chart, and the result is byte-for-byte identical to the published page.
