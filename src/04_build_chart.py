@@ -60,7 +60,7 @@ def main():
     page = TEMPLATE.read_text(encoding="utf-8").replace("__DATA__", data_js)
 
     OUTPUT.parent.mkdir(exist_ok=True)
-    OUTPUT.write_text(page, encoding="utf-8")
+    OUTPUT.write_text(page, encoding="utf-8", newline="\n")  # same bytes on Windows as on GitHub, so the checksum matches
     print(f"Wrote {OUTPUT.relative_to(ROOT)}: {len(records)} products")
 
 
