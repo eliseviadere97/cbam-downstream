@@ -12,7 +12,7 @@ YEARS = [2022, 2023, 2024]
 # CBAM charge = metal content x emission factor x carbon price / import price per tonne (full phase-in).
 CARBON_PRICE = 82.32           # EUR per tonne of CO2, Commission's CBAM certificate price for Q3 2026 (published 5 October 2026)
 EMISSION_FACTOR_STEEL = 1.9    # tCO2 per tonne of steel (assumption; not the CBAM default values)
-EMISSION_FACTOR_ALUMINIUM = 1.7  # tCO2 per tonne of aluminium, used for chapter 76
+EMISSION_FACTOR_ALUMINIUM = 1.55  # tCO2 per tonne of primary aluminium, used for chapter 76
 METAL_CONTENT_73_76 = 1.0      # articles of iron or steel (ch. 73) and of aluminium (ch. 76) are taken as all metal
 METAL_CONTENT_OTHER = 0.79     # other goods: average steel/aluminium content of the Commission's list (EPRS)
 

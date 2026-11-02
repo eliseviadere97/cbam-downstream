@@ -101,10 +101,10 @@ https://eliseviadere97.github.io/cbam-downstream/
 ## Check that it reproduces the published chart
 
 After `python run_all.py`, `docs/index.html` has this SHA-256 checksum, the same
-as the published chart (version of 22 October 2026):
+as the published chart (version of 2 November 2026):
 
 ```
-fc8f16874563998252d9a04d6221f1d071cd5bfe0d0d7d9ba613469cf1fd1693
+f25aa4d2761490e14e1dec53e6576155e185a4622ea5dd927541f522c4124966
 ```
 
 Check with `sha256sum docs/index.html` (Linux, macOS) or
@@ -113,7 +113,7 @@ Check with `sha256sum docs/index.html` (Linux, macOS) or
 `docs/headline_figures.csv` holds the Insight's figures: imports covered of
 €66bn, €139bn and €238bn a year; 0.23, 0.14 and 0.11 Mt of CO₂ per €bn on
 the Commission's list and on what the Council and Parliament add; average
-charges of 1.9%, 1.6% and 1.4%; a €16.8bn overlap between the two worries.
+charges of 1.9%, 1.6% and 1.4%; €17.1bn of imports with both risks.
 
 ## Method in brief
 
@@ -139,7 +139,7 @@ imports + EU production).
 **Chart rows (step 3).** A six-digit HS code together with the position that
 first lists its lines. The CBAM charge is metal content × emission factor ×
 €82.32 ÷ import value per tonne, at full phase-in (steel 1.9 tCO₂/t, aluminium
-1.7; metal content 1.0 for chapters 73 and 76, 0.79 otherwise). €82.32 is the
+1.55; metal content 1.0 for chapters 73 and 76, 0.79 otherwise). €82.32 is the
 [price the Commission set for CBAM certificates](https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/price-cbam-certificates_en)
 for the third quarter of 2026.
 
