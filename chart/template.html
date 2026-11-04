@@ -1,13 +1,13 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html lang="en-GB"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>CBAM Downstream Map</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
-/* Layout: one editorial column — red tag, headline, standfirst, filter row, the chart, notes. */
+/* Layout: one editorial column — CER logo band, red tag, headline, standfirst, filter row, the chart, notes. */
 :root {
   --bg: #ffffff; --fg: #121212; --muted: #5b5a55; --faint: #8d8c86; --rule: #e6e5e0; --panel: #f6f6f3;
-  --tag: #e3120b;
+  --tag: #e3120b; --brand: #00467f;
   --com: #2a78d6; --cnl: #eb6834; --ep: #1baf7a;
   --display: "IBM Plex Sans Condensed", "Arial Narrow", Arial, sans-serif;
   --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
@@ -21,9 +21,11 @@
 body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.45;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 24px 40px; }
 .wrap { max-width: 980px; margin: 0 auto; display: grid; gap: 14px; }
+.brand { display: block; background: var(--brand); }
+.brand img { display: block; height: 96px; width: auto; }
 .tag { width: 44px; height: 10px; background: var(--tag); }
 h1 { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 4vw, 36px); line-height: 1.08; margin: 0; text-wrap: balance; }
-.stand { color: var(--muted); font-size: 16px; margin: 0; max-width: 64ch; }
+.stand { color: var(--muted); font-size: 16px; margin: 0; text-align: justify; hyphens: auto; }
 .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .chip { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--rule); background: var(--bg); color: var(--fg);
   border-radius: 999px; padding: 6px 12px 6px 10px; font: 500 14px var(--body); cursor: pointer; }
@@ -63,7 +65,7 @@ circle.ring { fill: none; stroke: var(--fg); stroke-width: 2; pointer-events: no
 .pos { display: flex; gap: 4px; flex-wrap: wrap; }
 .pos span { font-size: 11.5px; border-radius: 999px; padding: 1px 8px; border: 1px solid var(--rule); color: var(--faint); }
 .pos span.on { color: #fff; border-color: transparent; }
-.notes { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; max-width: 80ch; }
+.notes { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; text-align: justify; hyphens: auto; }
 details { border-top: 1px solid var(--rule); padding-top: 10px; }
 summary { cursor: pointer; font-weight: 500; }
 .tbl { overflow-x: auto; margin-top: 10px; }
@@ -88,10 +90,12 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   .chartrow { grid-template-columns: 1fr; gap: 12px; }
   .side { border-left: 0; border-top: 1px solid var(--rule); padding: 10px 0 0; }
   .side-h { margin-top: 8px; }
+  .brand img { height: 78px; }
 }
 </style>
 
 <div class="wrap">
+  <a class="brand" href="https://www.cer.eu/"><img src="__LOGO__" alt="Centre for European Reform" width="352" height="132"></a>
   <div class="tag" aria-hidden="true"></div>
   <h1>Extending CBAM downstream: carbon-leakage risk and import dependence, product by product</h1>
   <p class="stand">Each circle is a product the EU might bring under its carbon border tax (CBAM). Higher up, the tax bites harder on the price. Further right, more of what the EU uses comes from abroad. Hover over a circle to see the product.</p>

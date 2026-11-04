@@ -1,13 +1,13 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html lang="en-GB"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>CBAM Downstream Map</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
-/* Layout: one editorial column — red tag, headline, standfirst, filter row, the chart, notes. */
+/* Layout: one editorial column — CER logo band, red tag, headline, standfirst, filter row, the chart, notes. */
 :root {
   --bg: #ffffff; --fg: #121212; --muted: #5b5a55; --faint: #8d8c86; --rule: #e6e5e0; --panel: #f6f6f3;
-  --tag: #e3120b;
+  --tag: #e3120b; --brand: #00467f;
   --com: #2a78d6; --cnl: #eb6834; --ep: #1baf7a;
   --display: "IBM Plex Sans Condensed", "Arial Narrow", Arial, sans-serif;
   --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
@@ -21,9 +21,11 @@
 body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.45;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 24px 40px; }
 .wrap { max-width: 980px; margin: 0 auto; display: grid; gap: 14px; }
+.brand { display: block; background: var(--brand); }
+.brand img { display: block; height: 96px; width: auto; }
 .tag { width: 44px; height: 10px; background: var(--tag); }
 h1 { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 4vw, 36px); line-height: 1.08; margin: 0; text-wrap: balance; }
-.stand { color: var(--muted); font-size: 16px; margin: 0; max-width: 64ch; }
+.stand { color: var(--muted); font-size: 16px; margin: 0; text-align: justify; hyphens: auto; }
 .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .chip { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--rule); background: var(--bg); color: var(--fg);
   border-radius: 999px; padding: 6px 12px 6px 10px; font: 500 14px var(--body); cursor: pointer; }
@@ -63,7 +65,7 @@ circle.ring { fill: none; stroke: var(--fg); stroke-width: 2; pointer-events: no
 .pos { display: flex; gap: 4px; flex-wrap: wrap; }
 .pos span { font-size: 11.5px; border-radius: 999px; padding: 1px 8px; border: 1px solid var(--rule); color: var(--faint); }
 .pos span.on { color: #fff; border-color: transparent; }
-.notes { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; max-width: 80ch; }
+.notes { color: var(--muted); font-size: 12.5px; display: grid; gap: 4px; text-align: justify; hyphens: auto; }
 details { border-top: 1px solid var(--rule); padding-top: 10px; }
 summary { cursor: pointer; font-weight: 500; }
 .tbl { overflow-x: auto; margin-top: 10px; }
@@ -88,10 +90,12 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   .chartrow { grid-template-columns: 1fr; gap: 12px; }
   .side { border-left: 0; border-top: 1px solid var(--rule); padding: 10px 0 0; }
   .side-h { margin-top: 8px; }
+  .brand img { height: 78px; }
 }
 </style>
 
 <div class="wrap">
+  <a class="brand" href="https://www.cer.eu/"><img src="data:image/png;base64,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" alt="Centre for European Reform" width="352" height="132"></a>
   <div class="tag" aria-hidden="true"></div>
   <h1>Extending CBAM downstream: carbon-leakage risk and import dependence, product by product</h1>
   <p class="stand">Each circle is a product the EU might bring under its carbon border tax (CBAM). Higher up, the tax bites harder on the price. Further right, more of what the EU uses comes from abroad. Hover over a circle to see the product.</p>

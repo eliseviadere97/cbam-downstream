@@ -2,15 +2,18 @@
 
 Reads   data/final/cbam_downstream_products.csv   (one row per circle on the chart)
         chart/template.html                         (the page: layout, styles, drawing code)
+        chart/cer_logo.png                          (the CER logo, cropped from the cer.eu header)
 Writes  docs/index.html                             (the finished, self-contained page)
 
 The page needs the data as a compact JavaScript array with short field names.
 This script does that translation and pastes the array into the template
-where it says __DATA__. Nothing is computed here: every number on the chart
-comes straight from the CSV.
+where it says __DATA__, and the logo, as an embedded image, where it says
+__LOGO__. Nothing is computed here: every number on the chart comes straight
+from the CSV.
 
 Run from the repository root:  python src/04_build_chart.py
 """
+import base64
 import csv
 import json
 
@@ -18,6 +21,7 @@ from config import ROOT
 
 FINAL = ROOT / "data" / "final" / "cbam_downstream_products.csv"
 TEMPLATE = ROOT / "chart" / "template.html"
+LOGO = ROOT / "chart" / "cer_logo.png"
 OUTPUT = ROOT / "docs" / "index.html"
 
 # Short codes the page's JavaScript expects for the position that first lists a product.
@@ -57,7 +61,8 @@ def main():
     records = [to_page_record(r) for r in rows]
 
     data_js = json.dumps(records, ensure_ascii=False, separators=(",", ":"))
-    page = TEMPLATE.read_text(encoding="utf-8").replace("__DATA__", data_js)
+    logo = "data:image/png;base64," + base64.b64encode(LOGO.read_bytes()).decode("ascii")
+    page = TEMPLATE.read_text(encoding="utf-8").replace("__DATA__", data_js).replace("__LOGO__", logo)
 
     OUTPUT.parent.mkdir(exist_ok=True)
     OUTPUT.write_text(page, encoding="utf-8", newline="\n")  # same bytes on Windows as on GitHub, so the checksum matches

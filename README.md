@@ -19,7 +19,7 @@ data/intermediate/02_cn8_imports_by_partner.csv       661 lines x 44 supplier co
   │  src/03_build_final.py          group lines into chart rows; supplier shares, CBAM charge, names
   ▼
 data/final/cbam_downstream_products.csv               386 rows, one per circle on the chart
-  │  src/04_build_chart.py          paste the data into chart/template.html
+  │  src/04_build_chart.py          paste the data and the CER logo (chart/cer_logo.png) into chart/template.html
   │  src/05_headline_figures.py     the numbers quoted in the Insight
   ▼
 docs/index.html (the interactive chart), docs/headline_figures.csv
@@ -101,10 +101,10 @@ https://eliseviadere97.github.io/cbam-downstream/
 ## Check that it reproduces the published chart
 
 After `python run_all.py`, `docs/index.html` has this SHA-256 checksum, the same
-as the published chart (version of 2 November 2026):
+as the published chart (version of 4 November 2026):
 
 ```
-9669d3c3b64fd8e7c7a11a7f6d3af10e3f580b9eeb6cf570e7abb665149d7869
+3a1b0b508fca4cbc9c7dfea7aa471208bad894f3323779c464d5af3ef8bde0c7
 ```
 
 Check with `sha256sum docs/index.html` (Linux, macOS) or
