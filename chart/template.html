@@ -1,16 +1,14 @@
 <!doctype html><html lang="en-GB"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>CBAM Downstream Map</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <style>
 /* Layout: one editorial column — CER logo band, red tag, headline, standfirst, filter row, the chart, notes. */
 :root {
   --bg: #ffffff; --fg: #121212; --muted: #5b5a55; --faint: #8d8c86; --rule: #e6e5e0; --panel: #f6f6f3;
   --tag: #e3120b; --brand: #00467f;
   --com: #2a78d6; --cnl: #eb6834; --ep: #1baf7a;
-  --display: "IBM Plex Sans Condensed", "Arial Narrow", Arial, sans-serif;
-  --body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --display: "Times New Roman", Times, "Liberation Serif", serif;
+  --body: "Times New Roman", Times, "Liberation Serif", serif;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #161615; --fg: #f0efea; --muted: #bdbcb4; --faint: #8a8982; --rule: #2f2f2c; --panel: #20201e;
@@ -24,7 +22,7 @@ body { background: var(--bg); color: var(--fg); font-family: var(--body); font-s
 .brand { display: block; background: var(--brand); }
 .brand img { display: block; height: 96px; width: auto; }
 .tag { width: 44px; height: 10px; background: var(--tag); }
-h1 { font-family: var(--display); font-weight: 700; font-size: clamp(26px, 4vw, 36px); line-height: 1.08; margin: 0; text-wrap: balance; }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 4vw, 36px); line-height: 1.08; margin: 0; text-align: justify; hyphens: auto; }
 .stand { color: var(--muted); font-size: 16px; margin: 0; text-align: justify; hyphens: auto; }
 .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .chip { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--rule); background: var(--bg); color: var(--fg);
@@ -98,7 +96,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   <a class="brand" href="https://www.cer.eu/"><img src="__LOGO__" alt="Centre for European Reform" width="352" height="132"></a>
   <div class="tag" aria-hidden="true"></div>
   <h1>Extending CBAM downstream: carbon-leakage risk and import dependence, product by product</h1>
-  <p class="stand">Each circle is a product the EU might bring under its carbon border tax (CBAM). Higher up, the tax bites harder on the price. Further right, more of what the EU uses comes from abroad. Hover over a circle to see the product.</p>
+  <p class="stand">Each circle is a product the EU might bring under its carbon border adjustment mechanism (CBAM), which charges imports the same carbon price that EU heavy industry pays. The higher the circle, the more the carbon charge adds to the import price. The further right, the more of the EU market imports already supply. Hover over a circle to see the product.</p>
 
   <div class="controls" role="group" aria-label="Filter by institution">
     <button class="chip" id="f-com" data-k="com" aria-pressed="true"><span class="dot" style="background:var(--com)"></span>In the Commission's proposal <span class="n" id="n-com"></span></button>
