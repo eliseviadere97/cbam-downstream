@@ -1,14 +1,18 @@
 <!doctype html><html lang="en-GB"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>CBAM Downstream Map</title>
 <meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
 <style>
-/* Layout: one editorial column — CER logo band, red tag, headline, standfirst, filter row, the chart, notes. */
+/* Layout: one editorial column — CER logo band, red tag, headline, byline, standfirst, filter row, the chart, notes.
+   Font: Open Sans, the font of cer.eu. */
 :root {
   --bg: #ffffff; --fg: #121212; --muted: #5b5a55; --faint: #8d8c86; --rule: #e6e5e0; --panel: #f6f6f3;
   --tag: #e3120b; --brand: #00467f;
   --com: #2a78d6; --cnl: #eb6834; --ep: #1baf7a;
-  --display: "Times New Roman", Times, "Liberation Serif", serif;
-  --body: "Times New Roman", Times, "Liberation Serif", serif;
+  --display: "Open Sans", Arial, Helvetica, sans-serif;
+  --body: "Open Sans", Arial, Helvetica, sans-serif;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #161615; --fg: #f0efea; --muted: #bdbcb4; --faint: #8a8982; --rule: #2f2f2c; --panel: #20201e;
@@ -23,6 +27,13 @@ body { background: var(--bg); color: var(--fg); font-family: var(--body); font-s
 .brand img { display: block; height: 96px; width: auto; }
 .tag { width: 44px; height: 10px; background: var(--tag); }
 h1 { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 4vw, 36px); line-height: 1.08; margin: 0; text-align: justify; hyphens: auto; }
+.byline { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: space-between; font-size: 15px; color: var(--muted); }
+.byline strong { color: var(--fg); font-weight: 600; }
+.gh { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--rule); border-radius: 999px; padding: 6px 14px 6px 12px;
+  color: var(--fg); background: var(--bg); font: 500 14px var(--body); text-decoration: none; }
+.gh:hover { background: var(--panel); }
+.gh:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+.gh svg { width: 16px; height: 16px; flex: none; }
 .stand { color: var(--muted); font-size: 16px; margin: 0; text-align: justify; hyphens: auto; }
 .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .chip { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--rule); background: var(--bg); color: var(--fg);
@@ -93,9 +104,13 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 </style>
 
 <div class="wrap">
-  <a class="brand" href="https://www.cer.eu/"><img src="__LOGO__" alt="Centre for European Reform" width="352" height="132"></a>
+  <a class="brand" href="https://www.cer.eu/" target="_blank" rel="noopener"><img src="__LOGO__" alt="Centre for European Reform" width="352" height="132"></a>
   <div class="tag" aria-hidden="true"></div>
   <h1>Extending CBAM downstream: carbon-leakage risk and import dependence, product by product</h1>
+  <div class="byline">
+    <span>By <strong>Elise Viadere</strong></span>
+    <a class="gh" href="https://github.com/eliseviadere97/cbam-downstream" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Data and code on GitHub</a>
+  </div>
   <p class="stand">Each circle is a product the EU might bring under its carbon border adjustment mechanism (CBAM), which charges imports the same carbon price that EU heavy industry pays. The higher the circle, the more the carbon charge adds to the import price. The further right, the more of the EU market imports already supply. Hover over a circle to see the product.</p>
 
   <div class="controls" role="group" aria-label="Filter by institution">
