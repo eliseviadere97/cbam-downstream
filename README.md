@@ -104,7 +104,7 @@ After `python run_all.py`, `docs/index.html` has this SHA-256 checksum, the same
 as the published chart (version of 6 November 2026):
 
 ```
-b9c8387fdfee272c9a5f3bb2029de616292954ef880495233334876189abd7ff
+ccf1e63b0f4d57f72e159d58c51309370b4aeed4fce6dae28143a5c833e88f3a
 ```
 
 Check with `sha256sum docs/index.html` (Linux, macOS) or
@@ -114,6 +114,66 @@ Check with `sha256sum docs/index.html` (Linux, macOS) or
 €66bn, €139bn and €238bn a year; 0.23, 0.14 and 0.11 Mt of CO₂ per €bn on
 the Commission's list and on what the Council and Parliament add; average
 charges of 1.9%, 1.6% and 1.4%; €17.1bn of imports with both risks.
+
+## From three lists to one dataset
+
+The Commission, the Council and Parliament write their product lists in
+different ways: some entries are single eight-digit tariff lines, others are
+whole headings or chapters, and some cover only part of a code ("ex"). The
+diagram shows how the code turns the three texts (top) into one dataset with
+one row per product (bottom), and how many lines or products are left at each
+stage. GitHub draws it from the text below.
+
+```mermaid
+%%{init: {"flowchart": {"wrappingWidth": 460}}}%%
+flowchart TD
+  COM["<b>Commission proposal</b><br/>COM(2025) 989, 17 Dec 2025<br/><br/>Annex I: 114 downstream entries<br/>84 eight-digit lines, 29 six-digit codes, 1 heading<br/>42 printed with 'ex' (only part of the code)"]
+  CNL["<b>Council general approach</b><br/>ST 10423/26, 12 Jun 2026<br/><br/>Keeps the Commission's table<br/>deletes 3 lines (Note 2)<br/>adds 200 eight-digit lines (Note 1)"]
+  EP["<b>Parliament amendments</b><br/>P10_TA(2026)0276, 15 Sep 2026<br/><br/>Keeps the Commission's table (assumption)<br/>adds 276 eight-digit lines one by one (Am. 83)<br/>adds 24 broad entries (Am. 110 and 135):<br/>chapter 73, 16 headings, 7 eight-digit lines"]
+
+  COM --> READ
+  CNL --> READ
+  EP --> READ
+
+  READ["<b>Translate every entry into eight-digit tariff lines</b><br/><i>src/01_legal_scope.py</i><br/>(the lines the EU traded in 2022–24, from Comext)<br/><br/>A list covers a line if it names that line, or a broader code that contains it:<br/>'8418' covers every fridge and freezer line; 'chapter 73' covers every line in chapter 73<br/>It covers a line partly if the entry carries 'ex', or if it names only narrower codes inside the line<br/>Partly covered lines keep their whole trade"]
+
+  READ --> DROP
+
+  DROP["<b>Keep only new downstream goods</b><br/><i>src/01_legal_scope.py</i><br/><br/>Drop lines already in today's CBAM (Regulation 2023/956)<br/>Drop all of chapter 72 (basic iron and steel)<br/>Drop lines a list carves out: 12 ferro-alloys (all lists),<br/>11 truck lines inside 'ex 8704' (Commission and Council)"]
+
+  DROP --> LINES
+
+  LINES["<b>661 downstream tariff lines</b><br/>data/intermediate/01_cn8_legal_coverage.csv<br/><br/>Commission covers 178 (121 fully, 57 partly)<br/>Council covers 373 (318 fully, 55 partly)<br/>Parliament covers 623 (585 fully, 38 partly)<br/>Parliament without its broad entries: 444"]
+
+  LINES --> FIRST
+
+  FIRST["<b>Credit each line to the first list that names it</b><br/><i>src/01_legal_scope.py</i><br/>Commission, then Council, then Parliament<br/>This sets the circle's colour and the button counts"]
+
+  FIRST --> FC["Commission<br/>178 lines"]
+  FIRST --> FK["Added by the Council<br/>198 lines"]
+  FIRST --> FP["Added only by Parliament<br/>285 lines"]
+
+  FC --> TRADE
+  FK --> TRADE
+  FP --> TRADE
+
+  TRADE["<b>Add trade and production to each line</b><br/><i>src/02_trade_and_production.py</i> → data/intermediate/02_cn8_trade_production.csv<br/><br/>Imports and exports from outside the EU, average 2022–24 (Comext)<br/>Imports from 44 named supplier countries<br/>EU production (Prodcom), matched to the lines through Prodcom–CN tables"]
+
+  TRADE --> GROUP
+
+  GROUP["<b>Group lines into products</b><br/><i>src/03_build_final.py</i><br/>same six-digit code and same first list = one circle<br/><br/>386 products: 103 Commission, 116 Council, 167 Parliament<br/>8 have no EU production data, so 378 are placed on the chart<br/>data/final/cbam_downstream_products.csv"]
+
+  classDef com fill:#dbe9fa,stroke:#2a78d6,color:#121212
+  classDef cnl fill:#fde3d7,stroke:#eb6834,color:#121212
+  classDef ep fill:#d6f2e7,stroke:#1baf7a,color:#121212
+  classDef step fill:#f6f6f3,stroke:#8d8c86,color:#121212
+  classDef out fill:#ffffff,stroke:#00467f,stroke-width:2px,color:#121212
+  class COM,FC com
+  class CNL,FK cnl
+  class EP,FP ep
+  class READ,DROP,FIRST,TRADE step
+  class LINES,GROUP out
+```
 
 ## Method in brief
 
@@ -175,7 +235,7 @@ placed on the chart. The columns of the intermediate files are described in
 ## Known limits
 
 - The emission factors and metal content are assumptions, not the CBAM default values.
-- 66 lines covered only through "ex" entries are counted in full.
+- 57 lines covered only through "ex" entries are counted in full.
 - Parliament's list is the widest reading of its text (623 lines).
 - One product name (HS 850300, Parliament) is filled by hand in `src/config.py`; no source file describes it.
 - HS 840734 has near-zero recorded EU production, giving an exports/production ratio of 7,310.
