@@ -49,8 +49,14 @@ h1 { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 4vw, 
 .search { flex: 1 1 200px; min-width: 0; border: 1px solid var(--rule); background: var(--bg); color: var(--fg); border-radius: 999px;
   padding: 7px 14px; font: 400 14px var(--body); }
 .seg { border: 1px solid var(--rule); background: var(--bg); color: var(--muted); border-radius: 6px; padding: 5px 10px; font: 400 13px var(--body); cursor: pointer; }
-.seg[aria-checked="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
-.seg:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+.seg[aria-pressed="true"] { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.seg:focus-visible, .sel:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+.seg .n { opacity: .75; font-variant-numeric: tabular-nums; }
+.filters { gap: 10px 28px; }
+.fgroup { display: inline-flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.flabel { color: var(--muted); font-size: 13px; margin-right: 4px; }
+.sel { border: 1px solid var(--rule); background: var(--bg); color: var(--fg); border-radius: 6px; padding: 5px 8px; font: 400 13px var(--body); max-width: 100%; }
+circle.p.hide { display: none; }
 .key { display: flex; gap: 10px; align-items: center; color: var(--muted); font-size: 13.5px; }
 .key svg { flex: none; width: 34px; height: 16px; }
 .small { display: inline-flex; gap: 6px; align-items: center; color: var(--muted); font-size: 13px; }
@@ -72,6 +78,7 @@ circle.ring { fill: none; stroke: var(--fg); stroke-width: 2; pointer-events: no
   border-radius: 6px; padding: 10px 12px; box-shadow: 0 6px 24px rgba(0,0,0,.14); font-size: 13px; display: grid; gap: 6px; z-index: 2; }
 .tip .nm { font-weight: 600; font-size: 14px; line-height: 1.3; }
 .tip .code { color: var(--faint); font-size: 12px; }
+.tip .more { color: var(--muted); font-size: 12px; font-style: italic; }
 .tip dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; }
 .tip dt { color: var(--muted); } .tip dd { margin: 0; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
 .pos { display: flex; gap: 4px; flex-wrap: wrap; }
@@ -125,10 +132,20 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
     <button class="chip" id="f-cnl" data-k="cnl" aria-pressed="true"><span class="dot" style="background:var(--cnl)"></span>Added by the Council <span class="n" id="n-cnl"></span></button>
     <button class="chip" id="f-ep" data-k="ep" aria-pressed="true"><span class="dot" style="background:var(--ep)"></span>Added only by Parliament <span class="n" id="n-ep"></span></button>
   </div>
+  <div class="controls filters">
+    <div class="fgroup" role="group" aria-label="Filter by imports from outside the EU a year">
+      <span class="flabel">Imports a year</span>
+      <button class="seg" data-b="0" aria-pressed="true">Over €1bn <span class="n" id="nb-0"></span></button>
+      <button class="seg" data-b="1" aria-pressed="true">€250m–1bn <span class="n" id="nb-1"></span></button>
+      <button class="seg" data-b="2" aria-pressed="false">€50–250m <span class="n" id="nb-2"></span></button>
+      <button class="seg" data-b="3" aria-pressed="false">Under €50m <span class="n" id="nb-3"></span></button>
+    </div>
+    <label class="fgroup"><span class="flabel">Main supplier</span>
+      <select class="sel" id="sup"><option value="">All countries</option></select></label>
+  </div>
   <div class="key"><svg width="34" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="var(--muted)"/><circle cx="26" cy="8" r="5.3" fill="none" stroke="var(--muted)" stroke-width="1.6"/></svg>
     <span>Filled: one country supplies more than half of the EU's imports of that product. Hollow: imports come from several countries.</span></div>
-  <div class="controls"><span class="small" id="shown"></span>
-    <label class="small"><input type="checkbox" id="all"> Show all products, including small ones</label></div>
+  <div class="small" id="shown"></div>
   <div class="chartrow">
   <div class="chartbox" id="box">
     <svg id="chart" viewBox="0 0 960 740" role="img" aria-label="Scatter chart of downstream products: imports' share of the EU market against the CBAM charge as a share of the price"></svg>
@@ -146,14 +163,14 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
   </div>
 
   <div class="notes">
-    <div>Circle size shows imports from outside the EU, average 2022–24. Button totals cover every line on each list. Colour shows which position first put the product on the list: the Council and Parliament build on the Commission's list.</div>
+    <div>Circle size shows imports from outside the EU, average 2022–24. The "Imports a year" buttons show or hide products by that value, so small circles hidden behind large ones can be reached; "Main supplier" picks out the products whose largest supplier from outside the EU is a given country. Button totals cover every line on each list. Colour shows which position first put the product on the list: the Council and Parliament build on the Commission's list.</div>
     <div><strong>How to read it:</strong> a product is a dependence risk if imports supply more than a third of the EU market (right of the dashed line) <em>and</em> one country supplies more than half of those imports (filled circle). It is a leakage risk if the CBAM charge is at least 1% of the price (on or above the dashed line). The remaining products, including hollow circles at the bottom right, have a low estimated carbon cost and no identified concentrated import dependence.</div>
     <div><strong>Why 1% for leakage risk:</strong> carbon leakage, a carbon price pushing production abroad, only matters if the charge changes what a product costs. From 2013 to 2020 the Commission's ETS test counted a trade-exposed sector at risk when its carbon costs reached 5% of value added. In EU manufacturing, value added is about a quarter of turnover, so that bar is about 1.25% of price. The 1% line is slightly lower, giving the longer lists the benefit of the doubt. Each list carries less leakage risk than the one before at any line between 1% and 2.5%.</div>
     <div><strong>Why a third for dependence risk:</strong> like the Commission's review of strategic dependencies, the test asks how much Europe relies on imports and how concentrated they are. But it compares imports with the whole EU market, including what Europe makes itself: a good made mostly at home is not one Europe depends on others for. A third is a demanding bar, since imports from outside the EU meet about 13% of EU demand on average.</div>
     <div><strong>What the tests do not show:</strong> a significant carbon cost does not mean a factory will relocate, and reliance on one supplier does not mean supplies are insecure. The tests show which products have a stronger case for inclusion in CBAM, not which will leak or be cut off.</div>
     <div><strong>Official counts and ours:</strong> the Commission proposed about 180 downstream products; we find 178 eight-digit tariff lines. The Council kept them, dropped three and added 200, about 370 lines in all, so the often-quoted "about 200" describes its additions, not its whole list. Parliament's 457 matches the Commission's lines plus the 276 it lists one by one (we find about 450); its broad headings reach 623 lines in all, which is what this map uses. The buttons count the lines each position adds, and colour credits each line to the first position that lists it.</div>
     <div><strong>CBAM charge:</strong> carbon in the steel or aluminium content at €82.32 a tonne of CO₂, the Commission's CBAM certificate price for the third quarter of 2026, once fully phased in. <strong>EU market:</strong> EU production plus imports from outside the EU.</div>
-    <div><strong>Sources:</strong> Eurostat Comext and Prodcom; European Commission COM(2025) 989 and CBAM certificate prices; Council of the EU ST 10423/26; European Parliament P10_TA(2026)0276; CER analysis.</div>
+    <div><strong>Sources:</strong> Eurostat Comext and Prodcom; European Commission proposal COM(2025) 989 (17 December 2025) and CBAM certificate prices; Council of the EU general approach, ST 10423/26 (12 June 2026); European Parliament amendments, P10_TA(2026)0276 (15 September 2026); CER analysis.</div>
   </div>
 
   <details>
@@ -165,6 +182,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 <script>
 const DATA = __DATA__;
 const LABEL = { com: "Commission", cnl: "Council", ep: "Parliament" };
+const DATES = { com: "17 Dec 2025", cnl: "12 Jun 2026", ep: "15 Sep 2026" };   // proposal, general approach, plenary amendments
 const FIRST = { com: "Commission's proposal", cnl: "Added by the Council", ep: "Added only by Parliament" };
 const W = 960, H = 740, M = { l: 64, r: 16, t: 16, b: 58 };
 const AX = { x0: 0, x1: 0.85, cut: 1 / 3, ticks: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8],
@@ -178,7 +196,10 @@ const eur = m => m >= 1000 ? "€" + (m / 1000).toFixed(1) + "bn" : "€" + Math
 const svgNS = "http://www.w3.org/2000/svg";
 const el = (n, a, p) => { const e = document.createElementNS(svgNS, n); for (const k in a) e.setAttribute(k, a[k]); if (p) p.appendChild(e); return e; };
 const svg = document.getElementById("chart"), tip = document.getElementById("tip"), box = document.getElementById("box");
-const state = { on: { com: true, cnl: true, ep: true }, all: false };
+const state = { on: { com: true, cnl: true, ep: true }, size: [true, true, false, false], sup: "" };
+// Size bands for the "Imports a year" buttons, in € million: over 1bn, 250m–1bn, 50–250m, under 50m.
+const BANDS = [[1000, Infinity], [250, 1000], [50, 250], [0, 50]];
+const band = d => BANDS.findIndex(([lo, hi]) => d.m >= lo && d.m < hi);
 try { const s = JSON.parse(localStorage.getItem("cbam-map") || "{}"); if (s.on) state.on = s.on; } catch (e) {}
 const maxM = Math.max(...DATA.map(d => d.m));
 const r = d => 3 + 26 * Math.sqrt(d.m / maxM);
@@ -222,7 +243,7 @@ function axes() {
 let dots = [], ring;
 function draw() {
   dots.forEach(c => c.remove()); dots = [];
-  const show = DATA.filter(d => (state.all || d.m >= 250) && d.su != null).sort((a, b) => b.m - a.m);
+  const show = DATA.filter(d => d.su != null).sort((a, b) => b.m - a.m);
   const g = svg.querySelector("g.pts") || el("g", { class: "pts" }, svg);
   show.forEach(d => {
     const filled = d.s > CONC, right = d.su > AX.cut;
@@ -232,21 +253,36 @@ function draw() {
     c.__d = d; dots.push(c);
   });
   ring = ring || el("circle", { class: "ring", r: 0 }, svg); svg.appendChild(ring); ring.setAttribute("r", 0);
-  filter();
   const counts = { com: 0, cnl: 0, ep: 0 }, sums = { com: 0, cnl: 0, ep: 0 };
   DATA.forEach(d => { counts[d.k] += d.l; sums[d.k] += d.m; });
-  for (const k in counts) document.getElementById("n-" + k).textContent = `${counts[k]} tariff lines · ${eur(sums[k])}`;
-  const tot = DATA.reduce((a, d) => a + d.m, 0), vis = show.reduce((a, d) => a + d.m, 0), miss = DATA.filter(d => d.su == null);
-  document.getElementById("shown").textContent = (state.all
-    ? `Showing all ${show.length} products with EU production data`
-    : `Showing the ${show.length} largest products (imports over €250m), ${Math.round(vis / tot * 100)}% of the import value`)
-    + (miss.length ? `; ${miss.length} products (${eur(miss.reduce((a, d) => a + d.m, 0))}) lack EU production data and cannot be placed.` : ".");
+  for (const k in counts) document.getElementById("n-" + k).textContent = `${DATES[k]} · ${counts[k]} tariff lines · ${eur(sums[k])}`;
+  // Main-supplier menu: countries in order of how many products on the chart they lead.
+  const nSup = {}; show.forEach(d => { nSup[d.p] = (nSup[d.p] || 0) + 1; });
+  const sel = document.getElementById("sup");
+  Object.keys(nSup).sort((a, b) => nSup[b] - nSup[a] || a.localeCompare(b)).forEach(p => {
+    const o = document.createElement("option"); o.value = p; o.textContent = p; sel.appendChild(o); });
+  filter();
   table(DATA.slice().sort((a, b) => b.m - a.m));
 }
+// Size hides a circle outright; position and supplier filters fade it, leaving the rest of the chart as context.
+const sizeOn = d => state.size[band(d)];
+const supOn = d => !state.sup || d.p === state.sup;
 function visible(d) {
-  return state.on[d.k];
+  return state.on[d.k] && sizeOn(d) && supOn(d);
 }
-function filter() { dots.forEach(c => c.classList.toggle("off", !visible(c.__d))); side(); }
+function filter() {
+  hideTip();
+  dots.forEach(c => { c.classList.toggle("hide", !sizeOn(c.__d)); c.classList.toggle("off", !visible(c.__d)); });
+  side();
+  const placed = dots.map(c => c.__d), passes = placed.filter(d => state.on[d.k] && sizeOn(d));
+  BANDS.forEach((_, i) => { document.getElementById("nb-" + i).textContent = placed.filter(d => band(d) === i && state.on[d.k] && supOn(d)).length; });
+  document.querySelectorAll("#sup option").forEach(o => {
+    o.textContent = o.value ? `${o.value} (${passes.filter(d => d.p === o.value).length})` : `All countries (${passes.length})`; });
+  const on = placed.filter(visible), tot = placed.reduce((a, d) => a + d.m, 0), vis = on.reduce((a, d) => a + d.m, 0), miss = DATA.filter(d => d.su == null);
+  const share = vis / tot;
+  document.getElementById("shown").textContent = `Showing ${on.length} of ${placed.length} products, ${share > 0 && share < 0.005 ? "under 1%" : Math.round(share * 100) + "%"} of their import value.`
+    + (miss.length ? ` ${miss.length} products (${eur(miss.reduce((a, d) => a + d.m, 0))}) lack EU production data and cannot be placed.` : "");
+}
 
 const QUAD = [["leak", "Leakage risk only"], ["both", "Both risks"], ["sec", "Dependence risk only"], ["none", "Low estimated carbon cost, no identified concentrated import dependence"]];
 function worry(d) {
@@ -276,7 +312,10 @@ function showTip(c) {
     <dt>Main supplier</dt><dd>${d.p}, ${Math.round(d.s * 100)}% of imports</dd>
     <dt>CBAM charge</dt><dd>${pct(d.ch)} of price</dd></dl>
     <div class="code">Listed by</div><div class="pos">${["com", "cnl", "ep"].map((k, i) => `<span class="${d.pos[i] ? "on" : ""}" style="${d.pos[i] ? `background:var(--${k})` : ""}">${d.pos[i] ? "✓" : "✗"} ${LABEL[k]}</span>`).join("")}</div>
-    <div class="code"></div>`;
+    <div class="code"></div><div class="more" hidden></div>`;
+  const st = stack.includes(c) ? stack : [c];
+  if (st.length > 1) { const m = tip.querySelector(".more"); m.hidden = false;
+    m.textContent = `${st.indexOf(c) + 1} of ${st.length} products at this spot: click or tap again for the next`; }
   tip.querySelector(".nm").textContent = d.n;
   tip.querySelectorAll(".code")[0].textContent = `HS ${d.c.slice(0, 4)} ${d.c.slice(4)} · ${d.g}${d.l > 1 ? ` · ${d.l} tariff lines` : ""}`;
   tip.querySelectorAll(".code")[2].textContent = quadrant(d);
@@ -288,7 +327,7 @@ function showTip(c) {
   if (top < 0) top = py + 16;
   tip.style.left = left + "px"; tip.style.top = top + "px";
 }
-function hideTip() { tip.hidden = true; ring.setAttribute("r", 0); }
+function hideTip() { tip.hidden = true; stack = []; if (ring) ring.setAttribute("r", 0); }
 function nearest(evt) {
   const pt = svg.createSVGPoint(); pt.x = evt.clientX; pt.y = evt.clientY;
   const p = pt.matrixTransform(svg.getScreenCTM().inverse());
@@ -303,16 +342,31 @@ function nearest(evt) {
   }
   return bd < 18 ? best : null;
 }
-svg.addEventListener("pointermove", e => { if (e.pointerType !== "mouse") return; const c = nearest(e); c ? showTip(c) : hideTip(); });
+// Some products sit at almost exactly the same point (centres under 6 units apart), so one hides another.
+// Clicking or tapping again on the same spot steps through them.
+let stack = [], si = 0, cycled = false;
+function spot(c) {
+  const x = +c.getAttribute("cx"), y = +c.getAttribute("cy");
+  return dots.filter(o => !o.classList.contains("off") && Math.hypot(+o.getAttribute("cx") - x, +o.getAttribute("cy") - y) < 6);
+}
+function pick(c) { stack = spot(c); si = stack.indexOf(c); cycled = false; showTip(c); }
+svg.addEventListener("pointermove", e => { if (e.pointerType !== "mouse") return; const c = nearest(e);
+  if (!c) return hideTip(); if (cycled && stack.includes(c)) return; pick(c); });
 svg.addEventListener("pointerleave", e => { if (e.pointerType === "mouse") hideTip(); });
-svg.addEventListener("click", e => { const c = nearest(e); c ? showTip(c) : hideTip(); });
+svg.addEventListener("click", e => { const c = nearest(e);
+  if (!c) return hideTip();
+  if (!tip.hidden && stack.length > 1 && stack.includes(c)) { si = (si + 1) % stack.length; cycled = true; showTip(stack[si]); }
+  else pick(c); });
 
 document.querySelectorAll(".chip").forEach(b => {
   b.setAttribute("aria-pressed", state.on[b.dataset.k]);
   b.addEventListener("click", () => { state.on[b.dataset.k] = !state.on[b.dataset.k]; b.setAttribute("aria-pressed", state.on[b.dataset.k]); filter(); save(); });
 });
 function save() { try { localStorage.setItem("cbam-map", JSON.stringify({ on: state.on })); } catch (e) {} }
-document.getElementById("all").addEventListener("change", e => { state.all = e.target.checked; hideTip(); draw(); });
+document.querySelectorAll(".seg[data-b]").forEach(b => {
+  b.addEventListener("click", () => { const i = +b.dataset.b; state.size[i] = !state.size[i]; b.setAttribute("aria-pressed", state.size[i]); filter(); });
+});
+document.getElementById("sup").addEventListener("change", e => { state.sup = e.target.value; filter(); });
 
 function table(rows) {
   const tb = document.querySelector("#tbl tbody"); tb.innerHTML = "";
