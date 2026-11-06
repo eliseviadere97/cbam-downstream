@@ -101,10 +101,10 @@ https://eliseviadere97.github.io/cbam-downstream/
 ## Check that it reproduces the published chart
 
 After `python run_all.py`, `docs/index.html` has this SHA-256 checksum, the same
-as the published chart (version of 4 November 2026):
+as the published chart (version of 6 November 2026):
 
 ```
-85f5dec7a18904add05cfd14ccd4d2b23218143807d26f616c2faf567252f9b7
+a4da0ce1723ba75f6a52a57d015ff5acb575f8ade998b1fc2e44f3f75d2dffba
 ```
 
 Check with `sha256sum docs/index.html` (Linux, macOS) or

@@ -36,7 +36,8 @@ h1 { font-family: var(--display); font-weight: 700; font-size: clamp(22px, 4vw, 
 .gh:hover { background: var(--panel); }
 .gh:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
 .gh svg { width: 16px; height: 16px; flex: none; }
-.stand { color: var(--muted); font-size: 16px; margin: 0; text-align: justify; hyphens: auto; }
+.stand { color: var(--muted); font-size: 16px; display: grid; gap: 8px; text-align: justify; hyphens: auto; }
+.stand p { margin: 0; }
 .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 .chip { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--rule); background: var(--bg); color: var(--fg);
   border-radius: 999px; padding: 6px 12px 6px 10px; font: 500 14px var(--body); cursor: pointer; }
@@ -112,7 +113,12 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
     <span>By <a class="link name" href="https://www.cer.eu/personnel/elise-viadere" target="_blank" rel="noopener">Elise Viadere</a>, <a class="link" href="https://www.cer.eu/" target="_blank" rel="noopener">Centre for European Reform</a></span>
     <a class="gh" href="https://github.com/eliseviadere97/cbam-downstream" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>Data and code on GitHub</a>
   </div>
-  <p class="stand">Each circle is a product the EU might bring under its carbon border adjustment mechanism (CBAM), which charges imports the same carbon price that EU heavy industry pays. The higher the circle, the more the carbon charge adds to the import price. The further right, the more of the EU market imports already supply. Hover over a circle to see the product.</p>
+  <div class="stand">
+    <p>The EU's carbon border adjustment mechanism (CBAM) aims to levy the same carbon price on imports as EU heavy industry pays.</p>
+    <p>This graph provides policy-makers with a snapshot of how the CBAM would raise import costs for different products. Those costs are then measured against how dependent the EU market is on imports for that product.</p>
+    <p>Each circle represents a product which the CBAM might cover. The European Commission, the Council and the European Parliament have proposed differing lists of products. Products in the initial Commission proposal are blue, ones added by the Council are orange, and ones added by the Parliament are green.</p>
+    <p>The higher the circle, the more the carbon charge adds to the price of the imported product. The further right the circle, the larger the share of the EU market which is supplied by imports from outside the EU. Hover over or tap a circle to see the product.</p>
+  </div>
 
   <div class="controls" role="group" aria-label="Filter by institution">
     <button class="chip" id="f-com" data-k="com" aria-pressed="true"><span class="dot" style="background:var(--com)"></span>In the Commission's proposal <span class="n" id="n-com"></span></button>
@@ -125,7 +131,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
     <label class="small"><input type="checkbox" id="all"> Show all products, including small ones</label></div>
   <div class="chartrow">
   <div class="chartbox" id="box">
-    <svg id="chart" viewBox="0 0 960 600" role="img" aria-label="Scatter chart of downstream products: imports' share of the EU market against the CBAM charge as a share of the price"></svg>
+    <svg id="chart" viewBox="0 0 960 740" role="img" aria-label="Scatter chart of downstream products: imports' share of the EU market against the CBAM charge as a share of the price"></svg>
     <div class="tip" id="tip" hidden></div>
   </div>
   <aside class="side" aria-live="polite" aria-label="Count of products on the chart">
@@ -160,7 +166,7 @@ td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
 const DATA = __DATA__;
 const LABEL = { com: "Commission", cnl: "Council", ep: "Parliament" };
 const FIRST = { com: "Commission's proposal", cnl: "Added by the Council", ep: "Added only by Parliament" };
-const W = 960, H = 600, M = { l: 64, r: 16, t: 16, b: 58 };
+const W = 960, H = 740, M = { l: 64, r: 16, t: 16, b: 58 };
 const AX = { x0: 0, x1: 0.85, cut: 1 / 3, ticks: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8],
   label: "Share of the EU market supplied by imports from outside the EU →" };
 const CONC = 0.5;
@@ -175,7 +181,7 @@ const svg = document.getElementById("chart"), tip = document.getElementById("tip
 const state = { on: { com: true, cnl: true, ep: true }, all: false };
 try { const s = JSON.parse(localStorage.getItem("cbam-map") || "{}"); if (s.on) state.on = s.on; } catch (e) {}
 const maxM = Math.max(...DATA.map(d => d.m));
-const r = d => 3 + 30 * Math.sqrt(d.m / maxM);
+const r = d => 3 + 26 * Math.sqrt(d.m / maxM);
 
 const strategic = d => d.su > AX.cut && d.s > CONC;
 function quadrant(d) {
@@ -286,10 +292,15 @@ function hideTip() { tip.hidden = true; ring.setAttribute("r", 0); }
 function nearest(evt) {
   const pt = svg.createSVGPoint(); pt.x = evt.clientX; pt.y = evt.clientY;
   const p = pt.matrixTransform(svg.getScreenCTM().inverse());
+  // The circle drawn on top wins. Small circles are drawn after large ones, so a small product sitting
+  // inside a large circle can still be picked. Tiny circles get a hit area of at least 6 units.
   let best = null, bd = Infinity;
-  dots.forEach(c => { if (c.classList.contains("off")) return;
-    const dx = +c.getAttribute("cx") - p.x, dy = +c.getAttribute("cy") - p.y, dist = Math.hypot(dx, dy) - +c.getAttribute("r");
-    if (dist < bd) { bd = dist; best = c; } });
+  for (let i = dots.length - 1; i >= 0; i--) {
+    const c = dots[i]; if (c.classList.contains("off")) continue;
+    const rr = +c.getAttribute("r"), d = Math.hypot(+c.getAttribute("cx") - p.x, +c.getAttribute("cy") - p.y);
+    if (d <= Math.max(rr, 6)) return c;
+    if (d - rr < bd) { bd = d - rr; best = c; }
+  }
   return bd < 18 ? best : null;
 }
 svg.addEventListener("pointermove", e => { if (e.pointerType !== "mouse") return; const c = nearest(e); c ? showTip(c) : hideTip(); });
