@@ -105,7 +105,7 @@ After `python run_all.py`, `docs/index.html` has this SHA-256 checksum, the same
 as the published chart (version of 10 November 2026):
 
 ```
-870d70be0f764892162b13243d080f4d945a03d1cb86b50f1390ab6f83b28587
+4fbee78f836e81053c1f067ec71dbfccca6c9ceadb4c24495dc2bb4a62d2cb38
 ```
 
 Check with `sha256sum docs/index.html` (Linux, macOS) or
