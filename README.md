@@ -1,8 +1,8 @@
 # CBAM downstream extension: data and interactive chart
 
 Code and data behind the CER Insight *Europe's carbon border should stop where the carbon does* and its
-interactive chart, *Does a broader CBAM mean better protection against carbon
-leakage?* (subtitle: *Extending CBAM downstream: carbon-leakage risk and import
+interactive chart, *Carbon costs and import dependence across proposed CBAM
+products* (subtitle: *Extending CBAM downstream: carbon-leakage risk and import
 dependence, product by product*). Everything runs from the raw downloads to the
 published chart, and the result is byte-for-byte identical to the published page.
 
@@ -102,10 +102,10 @@ https://eliseviadere97.github.io/cbam-downstream/
 ## Check that it reproduces the published chart
 
 After `python run_all.py`, `docs/index.html` has this SHA-256 checksum, the same
-as the published chart (version of 10 November 2026):
+as the published chart (version of 12 November 2026):
 
 ```
-4fbee78f836e81053c1f067ec71dbfccca6c9ceadb4c24495dc2bb4a62d2cb38
+9713ea93577254da6d5564dfc40353d52d1908bed8dc465e589aad48b11cf839
 ```
 
 Check with `sha256sum docs/index.html` (Linux, macOS) or
